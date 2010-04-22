@@ -1,7 +1,7 @@
-Diagnostics for Selection Sort:
+Diagnostics for Shell Sort:
 
 Sorted  100000 Naturals.
-Running Time: 40.451 seconds
-Comparisons:  705082704
-Writes:  2099446
-Exchanges:  99987
+Running Time: 0.089 seconds
+Comparisons:  14
+Writes:  14
+Exchanges:  0

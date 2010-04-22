@@ -31,10 +31,8 @@ package body Sort.Shell is
 		declare
 			data : NatArray(1..length);
 			gapSequence : NatArray(1..gapLength);
-			sortIndex : Natural;
-			numSorting : Natural;
-			min : Natural;
-			minIndex : Natural;
+			j : Natural;
+			tmp : Natural;
 			gap : Natural;
 
 		begin
@@ -52,52 +50,17 @@ package body Sort.Shell is
 				-- One Comparison
 				diagnostics.NumComparisons := diagnostics.NumComparisons + 1;
 
-				if (gap < data'length) then
-					
-					-- One Write.
-					diagnostics.NumWrites := diagnostics.NumWrites + 1;
-
-					numSorting := (data'length / gap);
-
-					-- Do a selection sort on just these numbers
-					for i in 1..numSorting loop
-						
-						-- Two writes here.
-						diagnostics.NumWrites := diagnostics.NumWrites + 2;
-
-						sortIndex := i*gap;
-
-						-- Set initial minimum to the first index of the array
-						min := data(sortIndex);
-
-						for j in (i +1)..numSorting loop
-							
-							-- One Comparion
-							diagnostics.NumComparisons := diagnostics.NumComparisons + 1;
-					
-							if(data(j*gap) < min) then
-
-								-- Two Writes.
-								diagnostics.NumWrites := diagnostics.NumWrites + 2;
-
-								min := data(j*gap);
-								minIndex := j*gap;
-
-							end if;
-						end loop;
-
-						-- One Comparion
-						diagnostics.NumComparisons := diagnostics.NumComparisons + 1;
-
-						if(min /= data(sortIndex)) then
-							-- One Exchange
-							diagnostics.NumExchanges := diagnostics.NumExchanges + 1;
-
-							Exchange(data, minIndex, sortIndex);
-						end if;
-					end loop;
-
-				end if;
+				    -- Do an insertion sort on just these numbers
+				for i in gap..(data'last -1) loop
+				    tmp := data(i);
+				    j := i+1;
+				    while (j >= gap and then data(j - gap) > tmp) loop
+					put_line(Integer'Image(j)); 
+					data(j) := data(j - gap);
+					j := j - gap;
+				    end loop;
+				    data(j) := tmp;
+				end loop;
 			end loop;
 			-- Clock the timer before writing the sorted array
 			endTime := Clock;

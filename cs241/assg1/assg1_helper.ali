@@ -1,10 +1,9 @@
-V "GNAT Lib v4.4"
+V "GNAT Lib v4.3"
 P SS ZX
-R nnnnnnnnnnnnnnnvnnvnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnn
+R nnnnnnnnnnnnnnnvnnvnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
 
-U assg1_helper%b	assg1_helper.adb	25b602d0 NE OO PK
+U assg1_helper%b	assg1_helper.adb	67528e40 NE PK
 W ada%s			ada.ads			ada.ali
-W ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W interfaces%s		interfac.ads		interfac.ali
 W options%s		options.adb		options.ali
@@ -15,97 +14,97 @@ W sort.shannon%s	sort-shannon.adb	sort-shannon.ali
 W sort.shell%s		sort-shell.adb		sort-shell.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
 
-U assg1_helper%s	assg1_helper.ads	5436983a EE NE OO PK
+U assg1_helper%s	assg1_helper.ads	16d214aa EE NE PK
 W ada%s			ada.ads			ada.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W options%s		options.adb		options.ali
 
 D ada.ads		20070406091342 9c7dd3ea
-D a-except.ads		20090409232307 b54b55de
-D a-finali.ads		20090409232307 9eaacebd
-D a-filico.ads		20090409232307 9299732a
+D a-except.ads		20070606104609 ba3e26e2
+D a-finali.ads		20070606101851 9eaacebd
+D a-filico.ads		20051115140645 9299732a
 D a-ioexce.ads		20070406091342 be0900a0
-D a-stream.ads		20090409232307 34aca5be
-D a-tags.ads		20090409232307 bfa07446
-D a-textio.ads		20090409232307 fe8af46e
+D a-stream.ads		20061031174905 34aca5be
+D a-tags.ads		20071213102130 e10285b3
+D a-textio.ads		20071213102052 bc6e78fe
 D a-unccon.ads		20070406091342 51e09df2
 D assg1_helper.ads	20100419232657 213b0ad2
 D assg1_helper.adb	20100419233248 a90a7968
-D interfac.ads		20090409232307 a69cad5c
-D i-cstrea.ads		20090409232307 e1e064a9
+D interfac.ads		20051209172227 a69cad5c
+D i-cstrea.ads		20070406092312 e1e064a9
 D options.ads		20100415032337 8b876686
 D sort.ads		20100420000200 1f560bb9
 D sort-insertion.ads	20100419060821 9e0e1500
 D sort-selection.ads	20100419060623 831702a5
 D sort-shannon.ads	20100419233118 28ce8111
 D sort-shell.ads	20100419233141 ed5d7536
-D system.ads		20091005122523 15e10948
-D s-crtl.ads		20090409232307 997234a1
-D s-exctab.ads		20090409232307 5c1c61ae
-D s-ficobl.ads		20090409232307 8bb681e5
-D s-finimp.ads		20090409232307 9449f4cb
-D s-finroo.ads		20090409232307 1408f9d1
-D s-parame.ads		20090409232307 f32e56e9
-D s-secsta.ads		20090409232307 7bae3621
-D s-soflin.ads		20090409232307 0c6fd39d
-D s-stache.ads		20090409232307 257b3be8
-D s-stalib.ads		20090409232307 52b793d5
-D s-stoele.ads		20090409232307 ed966df3
-D s-stoele.adb		20090409232307 e9998c78
-D s-stratt.ads		20090409232307 fef7c1da
-D s-traent.ads		20090409232307 bd5f2753
-D s-unstyp.ads		20090409232307 c0f9fae5
-D s-wchcon.ads		20090409232307 ab028799
+D system.ads		20090825132454 e2b32c27
+D s-crtl.ads		20070406092312 ef997abb
+D s-exctab.ads		20070912115821 5c1c61ae
+D s-ficobl.ads		20070814084926 8bb681e5
+D s-finimp.ads		20070606101344 9449f4cb
+D s-finroo.ads		20070814084926 1408f9d1
+D s-parame.ads		20070814084525 f32e56e9
+D s-secsta.ads		20070912115821 7bae3621
+D s-soflin.ads		20071213103411 2b67bae6
+D s-stache.ads		20070912115821 257b3be8
+D s-stalib.ads		20070912115821 9ac44ca2
+D s-stoele.ads		20070912115821 1104c881
+D s-stoele.adb		20071213103502 e9998c78
+D s-stratt.ads		20070406092920 b4bf338e
+D s-traent.ads		20070912115821 bd5f2753
+D s-unstyp.ads		20070912115821 c0f9fae5
+D s-wchcon.ads		20071213102052 ab028799
 X 1 ada.ads
 16K9*Ada 19e8 10|1r6 1r23 11|2r6 2r23
 X 8 a-textio.ads
-48K13*Text_IO 506e16 10|1w10 1r27 11|2w10 2r27
-51P9*File_Type(369R9) 10|6r55 7r77 8r75 9r56 10r78 11r76 13r55 14r77 15r75
+50K13*Text_IO 482e16 10|1w10 1r27 11|2w10 2r27
+53P9*File_Type(345R9) 10|6r55 7r77 8r75 9r56 10r78 11r76 13r55 14r77 15r75
 . 16r74 17r56 18r78 19r76 20r74 11|14r63 51r55 52r73 53r75 116r56 117r78
 . 118r76 127r55 128r77 129r75 130r74 155r56 156r78 157r76 158r75
-52n23*In_File{52E9} 11|63r60 65r60 143r55 145r55
-52n32*Out_File{52E9} 11|78r58 80r58 86r68 99r56 101r56 107r66
-86U14*Create 11|86r49 107r49
-92U14*Open 11|63r41 65r41 78r41 80r41 99r41 101r41 143r41 145r41
-98U14*Close 11|121r17 122r17 123r17 162r17
-242U14*Put 11|61r41 76r41 97r41 141r41
-249U14*Get_Line 11|62r41 77r41 98r41 142r41
-263U14*Put_Line 11|18r33 22r33 25r33 29r33 32r33 36r33 39r33 43r33 46r33
+54n23*In_File{54E9} 11|63r60 65r60 143r55 145r55
+54n32*Out_File{54E9} 11|78r58 80r58 86r68 99r56 101r56 107r66
+88U14*Create 11|86r49 107r49
+94U14*Open 11|63r41 65r41 78r41 80r41 99r41 101r41 143r41 145r41
+100U14*Close 11|121r17 122r17 123r17 162r17
+244U14*Put 11|61r41 76r41 97r41 141r41
+251U14*Get_Line 11|62r41 77r41 98r41 142r41
+265U14*Put_Line 11|18r33 22r33 25r33 29r33 32r33 36r33 39r33 43r33 46r33
 . 69r48 89r64 110r64 149r48
 X 10 assg1_helper.ads
 3K9*Assg1_Helper 23l5 23e17 11|8b14 165l5 165t17
 5U15*HandleOption 5>28 11|12b19 49l13 49t25
 5e28 option{14|3E14} 11|12b32 16r18
 6U19*OpenSortFiles 6=33 7=57 8=57 11|19r33 26r33 51b19 114l13 114t26 136r17
-6p33 unsortedFile{8|51P9} 11|51b33 63m46 65m46
-7p57 sortedFile{8|51P9} 11|52b53 78m46 80m46 86m56
-8p57 infoFile{8|51P9} 11|53b57 99m46 101m46 107m56
+6p33 unsortedFile{8|53P9} 11|51b33 63m46 65m46
+7p57 sortedFile{8|53P9} 11|52b53 78m46 80m46 86m56
+8p57 infoFile{8|53P9} 11|53b57 99m46 101m46 107m56
 9U19*CloseSortFiles 9=34 10=58 11=58 11|21r33 28r33 116b19 124l13 124t27
 . 161r17
-9p34 unsortedFile{8|51P9} 11|116b34 121m23
-10p58 sortedFile{8|51P9} 11|117b58 122m23
-11p58 infoFile{8|51P9} 11|118b58 123m23
+9p34 unsortedFile{8|53P9} 11|116b34 121m23
+10p58 sortedFile{8|53P9} 11|117b58 122m23
+11p58 infoFile{8|53P9} 11|118b58 123m23
 13U19*OpenSortFiles 13=33 14=57 15=57 16=57 11|33r33 40r33 127b19 153l13
 . 153t26
-13p33 unsortedFile{8|51P9} 11|127b33 136m31
-14p57 sortedFile{8|51P9} 11|128b57 136m45
-15p57 infoFile{8|51P9} 11|129b57 136m57
-16p57 gapFile{8|51P9} 11|130b57 143m46 145m46
+13p33 unsortedFile{8|53P9} 11|127b33 136m31
+14p57 sortedFile{8|53P9} 11|128b57 136m45
+15p57 infoFile{8|53P9} 11|129b57 136m57
+16p57 gapFile{8|53P9} 11|130b57 143m46 145m46
 17U19*CloseSortFiles 17=34 18=58 19=58 20=57 11|35r33 42r33 155b19 163l13
 . 163t27
-17p34 unsortedFile{8|51P9} 11|155b34 161m32
-18p58 sortedFile{8|51P9} 11|156b58 161m46
-19p58 infoFile{8|51P9} 11|157b58 161m58
-20p57 gapFile{8|51P9} 11|158b58 162m23
+17p34 unsortedFile{8|53P9} 11|155b34 161m32
+18p58 sortedFile{8|53P9} 11|156b58 161m46
+19p58 infoFile{8|53P9} 11|157b58 161m58
+20p57 gapFile{8|53P9} 11|158b58 162m23
 X 11 assg1_helper.adb
 10b9 debug{boolean} 60r40 75r40 96r40 140r40
-14p17 unsortedFile{8|51P9} 19m47 20m47 21m48 26m47 27m47 28m48 33m47 34m45
+14p17 unsortedFile{8|53P9} 19m47 20m47 21m48 26m47 27m47 28m48 33m47 34m45
 . 35m48 40m47 41m43 42m48
-14p31 sortedFile{8|51P9} 19m61 20m61 21m62 26m61 27m61 28m62 33m61 34m59
+14p31 sortedFile{8|53P9} 19m61 20m61 21m62 26m61 27m61 28m62 33m61 34m59
 . 35m62 40m61 41m57 42m62
-14p43 infoFile{8|51P9} 19m73 20m73 21m74 26m73 27m73 28m74 33m73 34m71 35m74
+14p43 infoFile{8|53P9} 19m73 20m73 21m74 26m73 27m73 28m74 33m73 34m71 35m74
 . 40m73 41m69 42m74
-14p53 gapFile{8|51P9} 33m83 34m81 35m84 40m83 41m79 42m84
+14p53 gapFile{8|53P9} 33m83 34m81 35m84 40m83 41m79 42m84
 55a17 fileName{string} 62m50 63r69 77m50 78r68 86r78 98m50 99r66 107r76
 56i17 length{natural} 62m60 63r81 77m60 78r80 86r90 98m60 99r78 107r88
 132a17 fileName{string} 142m50 143r64
