@@ -1,0 +1,7 @@
+Diagnostics for Selection Sort:
+
+Sorted  100000 Naturals.
+Running Time: 40.451 seconds
+Comparisons:  705082704
+Writes:  2099446
+Exchanges:  99987
