@@ -7,8 +7,8 @@ package body Sort.Insertion is
 							infoFile : in out File_Type)
 	is
 		length : Natural;
-		diagnostics : SortDiagnostics;
 		startTime, endTime : Time;
+		diagnostics : SortDiagnostics;
 	begin
 		-- Get number of naturals in file to declare a array of that size
 		NumNaturals(unsortedFile, length);
@@ -18,7 +18,7 @@ package body Sort.Insertion is
 		startTime := Clock;
 
 		-- Set up diagnostics
-		diagnostics.NumNaturals := length;
+		diagnostics.NumNaturals := Long_Long_Integer(length);
 		diagnostics.TypeOfSort := Insertion_Sort;
 
 		-- Declare block to create an array with dynamic size
@@ -31,35 +31,18 @@ package body Sort.Insertion is
 			-- Get the naturals to sort.
 			GetNaturals(data, unsortedFile);
 			
-			for i in (data'first +1)..(data'last -1) loop
-				-- Two Writes here.
+			for i in reverse data'range loop
+			    diagnostics.NumWrites := diagnostics.NumWrites + 2;
+			    j := i;
+			    tmp := data(j);
+			    while j < data'last and then data(j+1) < tmp loop
+				diagnostics.NumComparisons := diagnostics.NumComparisons+2;
 				diagnostics.NumWrites := diagnostics.NumWrites + 2;
-				tmp := data(i);
-				j := i-1;
-
-				loop
-					-- One Comparison here.
-					diagnostics.NumComparisons := diagnostics.NumComparisons + 1;
-					if(data(j) > tmp) then
-
-						-- Two Writes here.
-						diagnostics.NumWrites := diagnostics.NumWrites + 2;
-						data(j+1) := data(j);
-						j := j-1;
-
-						-- One Comparison here.
-						diagnostics.NumComparisons := diagnostics.NumComparisons + 1;
-						if(j < data'first) then
-							exit;
-						end if;
-					else
-						exit;
-					end if;
-				end loop;
-
-				-- One Write here.
-				diagnostics.NumWrites := diagnostics.NumWrites + 1;
-				data(j+1) := tmp;
+				data(j) := data(j+1);
+				j := j + 1;
+			    end loop;
+			    diagnostics.NumWrites := diagnostics.NumWrites + 1;
+			    data(j) := tmp;
 			end loop;
 
 			-- Clock the timer before writing the sorted array

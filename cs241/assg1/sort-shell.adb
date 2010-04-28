@@ -4,14 +4,14 @@ with Ada.Text_IO; use Ada.Text_IO;
 package body Sort.Shell is
 
 	procedure ShellSort(unsortedFile : in out File_Type; 
-							sortedFile : in out File_Type; 
-							infoFile : in out File_Type;
-							gapFile : in out File_Type)
+			   sortedFile : in out File_Type; 
+			   infoFile : in out File_Type;
+			   gapFile : in out File_Type)
 	is
 		length : Natural;
 		gapLength : Natural;
-		diagnostics : SortDiagnostics;
 		startTime, endTime : Time;
+		diagnostics : SortDiagnostics;
 	begin
 		-- Get number of naturals in files to declare arrays of that size
 		NumNaturals(unsortedFile, length);
@@ -22,7 +22,7 @@ package body Sort.Shell is
 		startTime := Clock;
 
 		-- Set up diagnostics
-		diagnostics.NumNaturals := length;
+		diagnostics.NumNaturals := Long_Long_Integer(length);
 		diagnostics.TypeOfSort := Shell_Sort;
 
 
@@ -46,19 +46,18 @@ package body Sort.Shell is
 				diagnostics.NumWrites := diagnostics.NumWrites + 1;
 				gap := gapSequence(g);
 
-				-- Only sort on numbers in the sequence that are less than the length of the array
-				-- One Comparison
-				diagnostics.NumComparisons := diagnostics.NumComparisons + 1;
-
 				    -- Do an insertion sort on just these numbers
 				for i in gap..(data'last -1) loop
+				    diagnostics.NumWrites := diagnostics.NumWrites + 2;
 				    tmp := data(i);
-				    j := i+1;
-				    while (j >= gap and then data(j - gap) > tmp) loop
-					put_line(Integer'Image(j)); 
+				    j := i;
+				    while (j > gap and then data(j - gap) > tmp) loop
+					diagnostics.NumComparisons := diagnostics.NumComparisons +2;
+					diagnostics.NumWrites := diagnostics.NumWrites +2;
 					data(j) := data(j - gap);
-					j := j - gap;
+					j := j - gap ;
 				    end loop;
+				    diagnostics.NumWrites := diagnostics.NumWrites + 1;
 				    data(j) := tmp;
 				end loop;
 			end loop;

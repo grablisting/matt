@@ -7,8 +7,8 @@ package body Sort.Selection is
 							infoFile : in out File_Type)
 	is
 		length : Natural;
-		diagnostics : SortDiagnostics;
 		startTime, endTime : Time;
+		diagnostics : SortDiagnostics;
 	begin
 		NumNaturals(unsortedFile, length);
 
@@ -17,7 +17,7 @@ package body Sort.Selection is
 		startTime := Clock;
 
 		-- Set up the diagnostics
-		diagnostics.NumNaturals := length;
+		diagnostics.NumNaturals := Long_Long_Integer(length);
 		diagnostics.TypeOfSort := Selection_Sort;
 		
 		-- Declare block to allow dynamic size of array.
@@ -32,8 +32,8 @@ package body Sort.Selection is
 
 			for i in data'range loop
 				-- One write.
-				min := data(i);
 				diagnostics.NumWrites := diagnostics.NumWrites + 1;
+				min := data(i);
 
 				for j in (i +1) .. data'last loop
 

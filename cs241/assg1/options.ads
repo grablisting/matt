@@ -6,6 +6,7 @@ package Options is
 			InsertionSort,
 			ShannonSort,
 			ShellSort,
+			GenerateDiagnostics,
 			Quit,
 			InvalidOption
 		);

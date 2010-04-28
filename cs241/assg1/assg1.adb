@@ -14,10 +14,10 @@ begin
 			 "the now-sorted integers, and one the performance of the sorting algorithm");	
 
     loop
-		DisplayOptions;
-		option := GetOption;
+	DisplayOptions;
+	option := GetOption;
 	exit when option = Quit;
-		HandleOption(option);
+	HandleOption(option);
     end loop;
 
 end Assg1;

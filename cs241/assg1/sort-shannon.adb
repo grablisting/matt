@@ -10,8 +10,8 @@ package body Sort.Shannon is
 	is
 		length : Natural;
 		gapLength : Natural;
-		diagnostics : SortDiagnostics;
 		startTime, endTime : Time;
+		diagnostics : SortDiagnostics;
 	begin
 		-- Get number of naturals in files to declare arrays of that size
 		NumNaturals(unsortedFile, length);
@@ -22,7 +22,7 @@ package body Sort.Shannon is
 		startTime := Clock;
 
 		-- Set up diagnostics
-		diagnostics.NumNaturals := length;
+		diagnostics.NumNaturals := Long_Long_Integer(length);
 		diagnostics.TypeOfSort := Shannon_Sort;
 
 

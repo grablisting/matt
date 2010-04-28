@@ -21,6 +21,9 @@ begin
 				 Integer'Image(OptionName'Pos(ShellSort)) & 
 				 ". Sort using Shell Sort");
 		put_line(":  " & 
+				 Integer'Image(OptionName'Pos(GenerateDiagnostics)) & 
+				 ". Generate Diagnostics of included files");
+		put_line(":  " & 
 				 Integer'Image(OptionName'Pos(Quit)) & 
 				 ". Quit the program");
 end DisplayOptions;

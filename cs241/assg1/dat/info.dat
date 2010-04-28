@@ -1,7 +1,826 @@
+Diagnostics for Insertion Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Random Order
+Running Time: 0.009 seconds
+Comparisons: 487540
+Writes: 490540
+Exchanges: 0
+Total Operations: 978080
+
+Diagnostics for Insertion Sort:
+
+Sorted 100000 Naturals.
+Type of Data: Random Order
+Running Time: 52.420 seconds
+Comparisons: 4997987854
+Writes: 4998290854
+Exchanges: 0
+Total Operations: 9996278708
+
+Diagnostics for Insertion Sort:
+
+Sorted 1000000 Naturals.
+Type of Data: Random Order
+Running Time: 5213.871 seconds
+Comparisons: 504536713294
+Writes: 504540016294
+Exchanges: 0
+Total Operations: 1009076729588
+
+Diagnostics for Insertion Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Sorted Order
+Running Time: 0.017 seconds
+Comparisons: 504537712294
+Writes: 504541018294
+Exchanges: 0
+Total Operations: 1009078730588
+
+Diagnostics for Insertion Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Sorted Order
+Running Time: 0.001 seconds
+Comparisons: 504537712294
+Writes: 504541021294
+Exchanges: 0
+Total Operations: 1009078733588
+
+Diagnostics for Insertion Sort:
+
+Sorted 10000 Naturals.
+Type of Data: Sorted Order
+Running Time: 0.010 seconds
+Comparisons: 504537712294
+Writes: 504541051294
+Exchanges: 0
+Total Operations: 1009078763588
+
+Diagnostics for Insertion Sort:
+
+Sorted 100000 Naturals.
+Type of Data: Sorted Order
+Running Time: 0.077 seconds
+Comparisons: 504537712294
+Writes: 504541351294
+Exchanges: 0
+Total Operations: 1009079063588
+
+Diagnostics for Insertion Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Reverse Order
+Running Time: 0.017 seconds
+Comparisons: 504538711294
+Writes: 504542353294
+Exchanges: 0
+Total Operations: 1009081064588
+
+Diagnostics for Insertion Sort:
+
+Sorted 10000 Naturals.
+Type of Data: Reverse Order
+Running Time: 1.057 seconds
+Comparisons: 504638701294
+Writes: 504642373294
+Exchanges: 0
+Total Operations: 1009281074588
+
+Diagnostics for Insertion Sort:
+
+Sorted 100000 Naturals.
+Type of Data: Reverse Order
+Running Time: 104.499 seconds
+Comparisons: 514638601294
+Writes: 514642573294
+Exchanges: 0
+Total Operations: 1029281174588
+
+Diagnostics for Selection Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Random Order
+Running Time: 0.008 seconds
+Comparisons: 514639101794
+Writes: 514642585210
+Exchanges: 990
+Total Operations: 1029281687994
+
+Diagnostics for Selection Sort:
+
+Sorted 100000 Naturals.
+Type of Data: Random Order
+Running Time: 44.758 seconds
+Comparisons: 519639151794
+Writes: 514644684656
+Exchanges: 100977
+Total Operations: 1034283937427
+
+Diagnostics for Selection Sort:
+
+Sorted 1000000 Naturals.
+Type of Data: Random Order
+Running Time: 4476.942 seconds
+Comparisons: 1019639651794
+Writes: 514670483596
+Exchanges: 1100959
+Total Operations: 1534311236349
+
+Diagnostics for Selection Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Sorted Order
+Running Time: 0.011 seconds
+Comparisons: 1019640152294
+Writes: 514670984596
+Exchanges: 1101459
+Total Operations: 1534312238349
+
+Diagnostics for Selection Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Sorted Order
+Running Time: 0.008 seconds
+Comparisons: 1019640652794
+Writes: 514670985596
+Exchanges: 1101459
+Total Operations: 1534312739849
+
+Diagnostics for Selection Sort:
+
+Sorted 10000 Naturals.
+Type of Data: Sorted Order
+Running Time: 0.453 seconds
+Comparisons: 1019690657794
+Writes: 514670995596
+Exchanges: 1101459
+Total Operations: 1534362754849
+
+Diagnostics for Selection Sort:
+
+Sorted 100000 Naturals.
+Type of Data: Sorted Order
+Running Time: 44.717 seconds
+Comparisons: 1024690707794
+Writes: 514671095596
+Exchanges: 1101459
+Total Operations: 1539362904849
+
+Diagnostics for Selection Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Reverse Order
+Running Time: 0.011 seconds
+Comparisons: 1024691208294
+Writes: 514671596596
+Exchanges: 1101959
+Total Operations: 1539363906849
+
+Diagnostics for Selection Sort:
+
+Sorted 10000 Naturals.
+Type of Data: Reverse Order
+Running Time: 0.642 seconds
+Comparisons: 1024741213294
+Writes: 514721606596
+Exchanges: 1106959
+Total Operations: 1539463926849
+
+Diagnostics for Selection Sort:
+
+Sorted 100000 Naturals.
+Type of Data: Reverse Order
+Running Time: 63.411 seconds
+Comparisons: 1029741263294
+Writes: 519721706596
+Exchanges: 1156959
+Total Operations: 1549464126849
+
 Diagnostics for Shell Sort:
 
-Sorted  100000 Naturals.
-Running Time: 0.089 seconds
-Comparisons:  14
-Writes:  14
-Exchanges:  0
+Sorted 1000 Naturals.
+Type of Data: Random Order
+Running Time: 0.002 seconds
+Comparisons: 1029741280554
+Writes: 519721740241
+Exchanges: 1156959
+Total Operations: 1549464177754
+
+Diagnostics for Shell Sort:
+
+Sorted 100000 Naturals.
+Type of Data: Random Order
+Running Time: 0.183 seconds
+Comparisons: 1029746919324
+Writes: 519730280463
+Exchanges: 1156959
+Total Operations: 1549478356746
+
+Diagnostics for Shell Sort:
+
+Sorted 1000000 Naturals.
+Type of Data: Random Order
+Running Time: 2.459 seconds
+Comparisons: 1029848243724
+Writes: 519867017672
+Exchanges: 1156959
+Total Operations: 1549716418355
+
+Diagnostics for Shell Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Sorted Order
+Running Time: 0.001 seconds
+Comparisons: 1029848251974
+Writes: 519867042307
+Exchanges: 1156959
+Total Operations: 1549716451240
+
+Diagnostics for Shell Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Sorted Order
+Running Time: 0.001 seconds
+Comparisons: 1029848251974
+Writes: 519867058692
+Exchanges: 1156959
+Total Operations: 1549716467625
+
+Diagnostics for Shell Sort:
+
+Sorted 10000 Naturals.
+Type of Data: Sorted Order
+Running Time: 0.012 seconds
+Comparisons: 1029848251974
+Writes: 519867284435
+Exchanges: 1156959
+Total Operations: 1549716693368
+
+Diagnostics for Shell Sort:
+
+Sorted 100000 Naturals.
+Type of Data: Sorted Order
+Running Time: 0.093 seconds
+Comparisons: 1029848251974
+Writes: 519870185887
+Exchanges: 1156959
+Total Operations: 1549719594820
+
+Diagnostics for Shell Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Reverse Order
+Running Time: 0.001 seconds
+Comparisons: 1029848260224
+Writes: 519870210522
+Exchanges: 1156959
+Total Operations: 1549719627705
+
+Diagnostics for Shell Sort:
+
+Sorted 10000 Naturals.
+Type of Data: Reverse Order
+Running Time: 0.013 seconds
+Comparisons: 1029848366902
+Writes: 519870542943
+Exchanges: 1156959
+Total Operations: 1549720066804
+
+Diagnostics for Shell Sort:
+
+Sorted 100000 Naturals.
+Type of Data: Reverse Order
+Running Time: 0.110 seconds
+Comparisons: 1029849658300
+Writes: 519874735793
+Exchanges: 1156959
+Total Operations: 1549725551052
+
+Diagnostics for Shannon Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Random Order
+Running Time: 0.011 seconds
+Comparisons: 1029850346292
+Writes: 519874770954
+Exchanges: 1162057
+Total Operations: 1549726279303
+
+Diagnostics for Shannon Sort:
+
+Sorted 100000 Naturals.
+Type of Data: Random Order
+Running Time: 60.694 seconds
+Comparisons: 1036673291062
+Writes: 519883837551
+Exchanges: 2174296
+Total Operations: 1556559302909
+
+Diagnostics for Shannon Sort:
+
+Sorted 1000000 Naturals.
+Type of Data: Random Order
+Running Time: 6062.616 seconds
+Comparisons: 1718841139552
+Writes: 520007737885
+Exchanges: 14147496
+Total Operations: 2238863024933
+
+Diagnostics for Shannon Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Sorted Order
+Running Time: 0.011 seconds
+Comparisons: 1718841827544
+Writes: 520007767298
+Exchanges: 14152408
+Total Operations: 2238863747250
+
+Diagnostics for Shannon Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Sorted Order
+Running Time: 0.013 seconds
+Comparisons: 1718842515536
+Writes: 520007774631
+Exchanges: 14152408
+Total Operations: 2238864442575
+
+Diagnostics for Shannon Sort:
+
+Sorted 10000 Naturals.
+Type of Data: Sorted Order
+Running Time: 0.621 seconds
+Comparisons: 1718910863482
+Writes: 520007908190
+Exchanges: 14152408
+Total Operations: 2238932924080
+
+Diagnostics for Shannon Sort:
+
+Sorted 100000 Naturals.
+Type of Data: Sorted Order
+Running Time: 60.609 seconds
+Comparisons: 1725733808252
+Writes: 520009379873
+Exchanges: 14152408
+Total Operations: 2245757340533
+
+Diagnostics for Shannon Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Reverse Order
+Running Time: 0.011 seconds
+Comparisons: 1725734496244
+Writes: 520009409286
+Exchanges: 14157320
+Total Operations: 2245758062850
+
+Diagnostics for Shannon Sort:
+
+Sorted 10000 Naturals.
+Type of Data: Reverse Order
+Running Time: 0.621 seconds
+Comparisons: 1725802844190
+Writes: 520009896085
+Exchanges: 14241096
+Total Operations: 2245826981371
+
+Diagnostics for Shannon Sort:
+
+Sorted 100000 Naturals.
+Type of Data: Reverse Order
+Running Time: 60.659 seconds
+Comparisons: 1732625788960
+Writes: 520015971994
+Exchanges: 15239404
+Total Operations: 2252657000358
+
+Diagnostics for Insertion Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Random Order
+Running Time: 0.009 seconds
+Comparisons: 487540
+Writes: 490540
+Exchanges: 0
+Total Operations: 978080
+
+Diagnostics for Insertion Sort:
+
+Sorted 100000 Naturals.
+Type of Data: Random Order
+Running Time: 52.197 seconds
+Comparisons: 4997500314
+Writes: 4997800314
+Exchanges: 0
+Total Operations: 9995300628
+
+Diagnostics for Insertion Sort:
+
+Sorted 1000000 Naturals.
+Type of Data: Random Order
+Running Time: 5212.876 seconds
+Comparisons: 499538725440
+Writes: 499541725440
+Exchanges: 0
+Total Operations: 999080450880
+
+Diagnostics for Insertion Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Sorted Order
+Running Time: 0.001 seconds
+Comparisons: 0
+Writes: 3000
+Exchanges: 0
+Total Operations: 3000
+
+Diagnostics for Insertion Sort:
+
+Sorted 10000 Naturals.
+Type of Data: Sorted Order
+Running Time: 0.008 seconds
+Comparisons: 0
+Writes: 30000
+Exchanges: 0
+Total Operations: 30000
+
+Diagnostics for Insertion Sort:
+
+Sorted 100000 Naturals.
+Type of Data: Sorted Order
+Running Time: 0.074 seconds
+Comparisons: 0
+Writes: 300000
+Exchanges: 0
+Total Operations: 300000
+
+Diagnostics for Insertion Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Reverse Order
+Running Time: 0.016 seconds
+Comparisons: 999000
+Writes: 1002000
+Exchanges: 0
+Total Operations: 2001000
+
+Diagnostics for Insertion Sort:
+
+Sorted 10000 Naturals.
+Type of Data: Reverse Order
+Running Time: 1.063 seconds
+Comparisons: 99990000
+Writes: 100020000
+Exchanges: 0
+Total Operations: 200010000
+
+Diagnostics for Insertion Sort:
+
+Sorted 100000 Naturals.
+Type of Data: Reverse Order
+Running Time: 104.351 seconds
+Comparisons: 9999900000
+Writes: 10000200000
+Exchanges: 0
+Total Operations: 20000100000
+
+Diagnostics for Selection Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Random Order
+Running Time: 0.005 seconds
+Comparisons: 500500
+Writes: 11916
+Exchanges: 990
+Total Operations: 513406
+
+Diagnostics for Selection Sort:
+
+Sorted 100000 Naturals.
+Type of Data: Random Order
+Running Time: 44.437 seconds
+Comparisons: 5000050000
+Writes: 2099446
+Exchanges: 99987
+Total Operations: 5002249433
+
+Diagnostics for Selection Sort:
+
+Sorted 1000000 Naturals.
+Type of Data: Random Order
+Running Time: 4438.178 seconds
+Comparisons: 500000500000
+Writes: 25798940
+Exchanges: 999982
+Total Operations: 500027298922
+
+Diagnostics for Selection Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Sorted Order
+Running Time: 0.005 seconds
+Comparisons: 500500
+Writes: 1000
+Exchanges: 0
+Total Operations: 501500
+
+Diagnostics for Selection Sort:
+
+Sorted 10000 Naturals.
+Type of Data: Sorted Order
+Running Time: 0.451 seconds
+Comparisons: 50005000
+Writes: 10000
+Exchanges: 0
+Total Operations: 50015000
+
+Diagnostics for Selection Sort:
+
+Sorted 100000 Naturals.
+Type of Data: Sorted Order
+Running Time: 44.413 seconds
+Comparisons: 5000050000
+Writes: 100000
+Exchanges: 0
+Total Operations: 5000150000
+
+Diagnostics for Selection Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Reverse Order
+Running Time: 0.009 seconds
+Comparisons: 500500
+Writes: 501000
+Exchanges: 500
+Total Operations: 1002000
+
+Diagnostics for Selection Sort:
+
+Sorted 10000 Naturals.
+Type of Data: Reverse Order
+Running Time: 0.644 seconds
+Comparisons: 50005000
+Writes: 50010000
+Exchanges: 5000
+Total Operations: 100020000
+
+Diagnostics for Selection Sort:
+
+Sorted 100000 Naturals.
+Type of Data: Reverse Order
+Running Time: 63.475 seconds
+Comparisons: 5000050000
+Writes: 5000100000
+Exchanges: 50000
+Total Operations: 10000200000
+
+Diagnostics for Shell Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Random Order
+Running Time: 0.001 seconds
+Comparisons: 17260
+Writes: 33645
+Exchanges: 0
+Total Operations: 50905
+
+Diagnostics for Shell Sort:
+
+Sorted 100000 Naturals.
+Type of Data: Random Order
+Running Time: 0.189 seconds
+Comparisons: 5638770
+Writes: 8540222
+Exchanges: 0
+Total Operations: 14178992
+
+Diagnostics for Shell Sort:
+
+Sorted 1000000 Naturals.
+Type of Data: Random Order
+Running Time: 2.454 seconds
+Comparisons: 101324400
+Writes: 136737209
+Exchanges: 0
+Total Operations: 238061609
+
+Diagnostics for Shell Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Sorted Order
+Running Time: 0.001 seconds
+Comparisons: 0
+Writes: 16385
+Exchanges: 0
+Total Operations: 16385
+
+Diagnostics for Shell Sort:
+
+Sorted 10000 Naturals.
+Type of Data: Sorted Order
+Running Time: 0.010 seconds
+Comparisons: 0
+Writes: 225743
+Exchanges: 0
+Total Operations: 225743
+
+Diagnostics for Shell Sort:
+
+Sorted 100000 Naturals.
+Type of Data: Sorted Order
+Running Time: 0.101 seconds
+Comparisons: 0
+Writes: 2901452
+Exchanges: 0
+Total Operations: 2901452
+
+Diagnostics for Shell Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Reverse Order
+Running Time: 0.001 seconds
+Comparisons: 8250
+Writes: 24635
+Exchanges: 0
+Total Operations: 32885
+
+Diagnostics for Shell Sort:
+
+Sorted 10000 Naturals.
+Type of Data: Reverse Order
+Running Time: 0.014 seconds
+Comparisons: 106678
+Writes: 332421
+Exchanges: 0
+Total Operations: 439099
+
+Diagnostics for Shell Sort:
+
+Sorted 100000 Naturals.
+Type of Data: Reverse Order
+Running Time: 0.118 seconds
+Comparisons: 1291398
+Writes: 4192850
+Exchanges: 0
+Total Operations: 5484248
+
+Diagnostics for Shannon Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Random Order
+Running Time: 0.008 seconds
+Comparisons: 687992
+Writes: 35161
+Exchanges: 5098
+Total Operations: 728251
+
+Diagnostics for Shannon Sort:
+
+Sorted 100000 Naturals.
+Type of Data: Random Order
+Running Time: 60.670 seconds
+Comparisons: 6822944770
+Writes: 9066597
+Exchanges: 1012239
+Total Operations: 6833023606
+
+Diagnostics for Shannon Sort:
+
+Sorted 1000000 Naturals.
+Type of Data: Random Order
+Running Time: 6052.627 seconds
+Comparisons: 682167848490
+Writes: 123900334
+Exchanges: 11973200
+Total Operations: 682303722024
+
+Diagnostics for Shannon Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Sorted Order
+Running Time: 0.010 seconds
+Comparisons: 687992
+Writes: 7333
+Exchanges: 0
+Total Operations: 695325
+
+Diagnostics for Shannon Sort:
+
+Sorted 10000 Naturals.
+Type of Data: Sorted Order
+Running Time: 0.617 seconds
+Comparisons: 68347946
+Writes: 133559
+Exchanges: 0
+Total Operations: 68481505
+
+Diagnostics for Shannon Sort:
+
+Sorted 100000 Naturals.
+Type of Data: Sorted Order
+Running Time: 60.566 seconds
+Comparisons: 6822944770
+Writes: 1471683
+Exchanges: 0
+Total Operations: 6824416453
+
+Diagnostics for Shannon Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Reverse Order
+Running Time: 0.011 seconds
+Comparisons: 687992
+Writes: 29413
+Exchanges: 4912
+Total Operations: 722317
+
+Diagnostics for Shannon Sort:
+
+Sorted 10000 Naturals.
+Type of Data: Reverse Order
+Running Time: 0.622 seconds
+Comparisons: 68347946
+Writes: 486799
+Exchanges: 83776
+Total Operations: 68918521
+
+Diagnostics for Shannon Sort:
+
+Sorted 100000 Naturals.
+Type of Data: Reverse Order
+Running Time: 60.641 seconds
+Comparisons: 6822944770
+Writes: 6075909
+Exchanges: 998308
+Total Operations: 6830018987
+
+Diagnostics for Insertion Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Random Order
+Running Time: 0.016 seconds
+Comparisons: 487540
+Writes: 490540
+Exchanges: 0
+Total Operations: 978080
+
+Diagnostics for Insertion Sort:
+
+Sorted 100000 Naturals.
+Type of Data: Random Order
+Running Time: 55.043 seconds
+Comparisons: 4997500314
+Writes: 4997800314
+Exchanges: 0
+Total Operations: 9995300628
+
+Diagnostics for Insertion Sort:
+
+Sorted 1000000 Naturals.
+Type of Data: Random Order
+Running Time: 5536.784 seconds
+Comparisons: 499538725440
+Writes: 499541725440
+Exchanges: 0
+Total Operations: 999080450880
+
+Diagnostics for Insertion Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Sorted Order
+Running Time: 0.003 seconds
+Comparisons: 0
+Writes: 3000
+Exchanges: 0
+Total Operations: 3000
+
+Diagnostics for Insertion Sort:
+
+Sorted 10000 Naturals.
+Type of Data: Sorted Order
+Running Time: 0.028 seconds
+Comparisons: 0
+Writes: 30000
+Exchanges: 0
+Total Operations: 30000
+
+Diagnostics for Insertion Sort:
+
+Sorted 100000 Naturals.
+Type of Data: Sorted Order
+Running Time: 0.114 seconds
+Comparisons: 0
+Writes: 300000
+Exchanges: 0
+Total Operations: 300000
+
+Diagnostics for Insertion Sort:
+
+Sorted 1000 Naturals.
+Type of Data: Reverse Order
+Running Time: 0.014 seconds
+Comparisons:

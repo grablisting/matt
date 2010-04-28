@@ -5,6 +5,7 @@
 with Ada.Text_IO; use Ada.Text_IO;
 with Ada.Float_Text_IO; use Ada.Float_Text_IO;
 with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
+with Ada.Long_Long_Integer_Text_IO; use Ada.Long_Long_Integer_Text_IO;
 
 package body Sort is
 
@@ -17,17 +18,45 @@ package body Sort is
 			when Selection_Sort => put_line(infoFile, "Selection Sort:");
 			when Shannon_Sort => put_line(infoFile, "Shannon Sort:");
 			when Shell_Sort => put_line(infoFile, "Shell Sort:");
+			when Unknown => put_line(infoFile, "Unknown Sort:");
 		end case;
 		new_line(infoFile);
-		put_line(infoFile, "Sorted " & Integer'Image(diagnostics.NumNaturals) & " Naturals.");
+
+		put(infoFile, "Sorted ");
+		put(infoFile, diagnostics.NumNaturals, 0);
+		put(infoFile, " Naturals.");
+		new_line(infoFile);
+
+		put_line(infoFile, "Type of Data: " & ToString(diagnostics.TypeOfData));
+
 		put(infoFile, "Running Time: ");
 		put(infoFile, diagnostics.RunningTime, 0, 3, 0);
 		put_line(infoFile, " seconds");
-		put_line(infoFile, "Comparisons: " & Integer'Image(diagnostics.NumComparisons));
-		put_line(infoFile, "Writes: " & Integer'Image(diagnostics.NumWrites));
-		put_line(infoFile, "Exchanges: " & Integer'Image(diagnostics.NumExchanges));
+
+		put(infoFile, "Comparisons: ");
+		put(infoFile, diagnostics.NumComparisons, 0);
+		new_line(infoFile);
+
+		put(infoFile, "Writes: ");
+		put(infoFile, diagnostics.NumWrites, 0);
+		new_line(infoFile);
+
+		put(infoFile, "Exchanges: ");
+		put(infoFile, diagnostics.NumExchanges, 0);
+		new_line(infoFile);
+
+		put(infoFile, "Total Operations: ");
+		put(infoFile, diagnostics.NumExchanges + diagnostics.NumWrites + diagnostics.NumComparisons, 0);
+		new_line(infoFile);
+
 	end WriteDiagnostics;
 
+	procedure WriteDiagnosticsCSV(csvFile : in out File_Type; diagnostics : in SortDiagnostics)
+	is
+	begin
+		null;
+	end;
+	
 	procedure DisplayDiagnostics(diagnostics : in SortDiagnostics)
 	is
 	begin
@@ -37,15 +66,37 @@ package body Sort is
 			when Selection_Sort => put_line("Selection Sort:");
 			when Shannon_Sort => put_line("Shannon Sort:");
 			when Shell_Sort => put_line("Shell Sort:");
+			when Unknown => put_line("Unknown Sort:");
 		end case;
 		new_line;
-		put_line("Sorted " & Integer'Image(diagnostics.NumNaturals) & " Naturals.");
+
+		put("Sorted ");
+		put(diagnostics.NumNaturals, 0);
+		put(" Naturals.");
+		new_line;
+
+		put_line("Type of Data: " & ToString(diagnostics.TypeOfData));
+
 		put("Running Time: ");
 		put(diagnostics.RunningTime, 0, 3, 0);
 		put_line(" seconds");
-		put_line("Comparisons: " & Integer'Image(diagnostics.NumComparisons));
-		put_line("Writes: " & Integer'Image(diagnostics.NumWrites));
-		put_line("Exchanges: " & Integer'Image(diagnostics.NumExchanges));
+
+		put("Comparisons: ");
+		put(diagnostics.NumComparisons, 0);
+		new_line;
+
+		put("Writes: ");
+		put(diagnostics.NumWrites, 0);
+		new_line;
+
+		put("Exchanges: ");
+		put(diagnostics.NumExchanges, 0);
+		new_line;
+
+		put("Total Operations: ");
+		put(diagnostics.NumExchanges + diagnostics.NumWrites + diagnostics.NumComparisons, 0);
+		new_line;
+
 	end DisplayDiagnostics;
 
 
@@ -89,4 +140,15 @@ package body Sort is
 		data(index2) := tmp;
 	end Exchange;
 
+	function ToString(typeOfData : DataType) return String
+	is
+	begin
+	    case typeOfData is
+		when RandomOrder => return "Random Order";
+		when SortedOrder => return "Sorted Order";
+		when ReverseOrder => return "Reverse Order";
+		when others => return "Unknown Order";
+	    end case;
+	end ToString;
+	
 end Sort;
