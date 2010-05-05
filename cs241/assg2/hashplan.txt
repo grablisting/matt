@@ -1,0 +1,27 @@
+average number of probes per insertion - total probes / total insertions
+number of probes per insertion for a certain load factor
+   -maybe at each milestone (0.2, 0.4 ... ) record the probes to insert
+does the table eventually fill up?
+   -some way of knowing when a probe should give up (when i > n)
+given a size of input, detect the best prime number to use as the size of the hash table
+
+1. take input file name
+2. take input number of ints to read
+3. calculate ideal size of hash table
+4. for all 4 probing types, created a TestHashTable passing in the probing function
+5. for all 4 probing types, execute FillWithFile passing in the file from input
+    |-> should return a HashPerformance record with useful information
+6. output the results to a file as well as stdout
+
+PerformanceRecord
+    -type of probing
+    -total probes
+    -total insertions
+    -size of hash table
+    -#probes/insertion at each 0.2 load factor (an array of 5 naturals)
+    
+File Structure
+    -Assg2 - driver
+    -Assg2_Helper - provides function for driver
+    -Hash - parent package the has utility functions for test hash table to use
+    -Hash.Test_hash_Table - generic child package
