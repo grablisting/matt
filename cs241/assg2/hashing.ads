@@ -28,7 +28,7 @@ private
 	    NumProbes : Long_Long_Integer := 0;
 	    NumInsertions : Long_Long_Integer := 0;
 	    ProbesPerLoadFactor : Int_List.listPtr := null;
-	    LoadFactorGap : Float := 0.2;
+	    LoadFactorGap : Float := 0.1;
 	end record;
     
     function NewPerformanceRecord(typeOfProbing : ProbingMethod;

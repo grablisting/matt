@@ -51,7 +51,9 @@ package body Hashing.Common is
 	    get(file, toInsert);
 	    probes := Linear_Hash_Table.Insert(table, toInsert);
 	    AddProbes(pRecord, probes);
-	    AddInsertion(pRecord);
+	    if(probes < Linear_Hash_Table.Size(table)) then
+		AddInsertion(pRecord);
+	    end if;
 	    if(Linear_Hash_Table.LoadFactor(table) >= loadFactorTarget) then
 		loadFactorTarget := loadFactorTarget + pRecord.LoadFactorGap;
 		AddLoadFactorStat(pRecord, probes);
@@ -76,7 +78,9 @@ package body Hashing.Common is
 	    get(file, toInsert);
 	    probes := Quadratic_Hash_Table.Insert(table, toInsert);
 	    AddProbes(pRecord, probes);
-	    AddInsertion(pRecord);
+	    if(probes < Quadratic_Hash_Table.Size(table)) then
+		AddInsertion(pRecord);
+	    end if;
 	    if(Quadratic_Hash_Table.LoadFactor(table) >= loadFactorTarget) then
 		loadFactorTarget := loadFactorTarget + pRecord.LoadFactorGap;
 		AddLoadFactorStat(pRecord, probes);
@@ -101,7 +105,9 @@ package body Hashing.Common is
 	    get(file, toInsert);
 	    probes := Cubic_Hash_Table.Insert(table, toInsert);
 	    AddProbes(pRecord, probes);
-	    AddInsertion(pRecord);
+	    if(probes < Cubic_Hash_Table.Size(table)) then
+		AddInsertion(pRecord);
+	    end if;
 	    if(Cubic_Hash_Table.LoadFactor(table) >= loadFactorTarget) then
 		loadFactorTarget := loadFactorTarget + pRecord.LoadFactorGap;
 		AddLoadFactorStat(pRecord, probes);
@@ -126,9 +132,10 @@ package body Hashing.Common is
 	    get(file, toInsert);
 	    probes := Beaty_Hash_Table.Insert(table, toInsert);
 	    AddProbes(pRecord, probes);
-	    AddInsertion(pRecord);
+	    if(probes < Beaty_Hash_Table.Size(table)) then
+		AddInsertion(pRecord);
+	    end if;
 	    if(Beaty_Hash_Table.LoadFactor(table) >= loadFactorTarget) then
-		put_line("inserted some");
 		loadFactorTarget := loadFactorTarget + pRecord.LoadFactorGap;
 		AddLoadFactorStat(pRecord, probes);
 	    end if;

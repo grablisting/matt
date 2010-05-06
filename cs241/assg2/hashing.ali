@@ -2,7 +2,7 @@ V "GNAT Lib v4.4"
 P SS ZX
 R nnnvnnnvnnnnnnnvnnvnnvvvnnnnvnnnnnnnnnvnnvnnnnnnnnnnvnnvnnnnvnnnnnnnnnnnnnnnn
 
-U hashing%b		hashing.adb		97654c59 NE OO PK
+U hashing%b		hashing.adb		4db39c84 NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
 W ada.long_long_integer_text_io%s  a-llitio.ads	a-llitio.ali
@@ -19,7 +19,7 @@ W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
 W system.string_ops%s	s-strops.adb		s-strops.ali
 
-U hashing%s		hashing.ads		04effb09 EE OO PK
+U hashing%s		hashing.ads		de392bd4 EE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
@@ -50,7 +50,7 @@ D a-unccon.ads		20070406091342 51e09df2
 D a-uncdea.ads		20070406091342 dc667e6d
 D generic_linked_list.ads  20100506083058 3432f07b
 D generic_linked_list.adb  20100506084041 d305cccb
-D hashing.ads		20100506075335 ce57ff1c
+D hashing.ads		20100506091259 14812fc1
 D hashing.adb		20100506084959 aec71aa6
 D interfac.ads		20090409232307 a69cad5c
 D i-cstrea.ads		20090409232307 e1e064a9

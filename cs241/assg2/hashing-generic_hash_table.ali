@@ -9,7 +9,7 @@ W ada.text_io%s		a-textio.adb		a-textio.ali
 W ada.unchecked_deallocation%s
 W hashing%s		hashing.adb		hashing.ali
 
-U hashing.generic_hash_table%s  hashing-generic_hash_table.ads  d2b18476 BN EE NE OO PK GE
+U hashing.generic_hash_table%s  hashing-generic_hash_table.ads  086754ab BN EE NE OO PK GE
 W hashing%s		hashing.adb		hashing.ali
 
 D ada.ads		20070406091342 9c7dd3ea
@@ -25,7 +25,7 @@ D a-tiinio.ads		20090409232307 949a7272
 D a-unccon.ads		20070406091342 51e09df2
 D a-uncdea.ads		20070406091342 dc667e6d
 D generic_linked_list.ads  20100506083058 3432f07b
-D hashing.ads		20100506075335 ce57ff1c
+D hashing.ads		20100506091259 14812fc1
 D hashing-generic_hash_table.ads  20100506082026 1ce67b6a
 D hashing-generic_hash_table.adb  20100506082315 1096fb73
 D interfac.ads		20090409232307 a69cad5c
