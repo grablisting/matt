@@ -1,0 +1,30 @@
+Performance for linear-probing hash table of size  1009
+Number of Probes: 20599
+Number of Insertions: 1009
+Average Number of Probes per Insertion: 20
+Number of Probes at Load Factor 0.20:  0
+Number of Probes at Load Factor 0.40:  1
+Number of Probes at Load Factor 0.60:  1
+Number of Probes at Load Factor 0.80:  81
+Number of Probes at Load Factor 1.00:  426
+Hash table filled?: yes
+Performance for quadratic-probing hash table of size  1009
+Number of Probes: 6287
+Number of Insertions: 1009
+Average Number of Probes per Insertion: 6
+Number of Probes at Load Factor 0.20:  0
+Number of Probes at Load Factor 0.40:  1
+Number of Probes at Load Factor 0.60:  1
+Number of Probes at Load Factor 0.80:  3
+Number of Probes at Load Factor 1.00:  328
+Hash table filled?: yes
+Performance for cubic-probing hash table of size  1009
+Number of Probes: 13007
+Number of Insertions: 1013
+Average Number of Probes per Insertion: 12
+Number of Probes at Load Factor 0.20:  0
+Number of Probes at Load Factor 0.40:  1
+Number of Probes at Load Factor 0.60:  3
+Number of Probes at Load Factor 0.80:  9
+Number of Probes at Load Factor 1.00:  559
+Hash table filled?: yes
