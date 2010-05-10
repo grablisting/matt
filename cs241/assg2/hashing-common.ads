@@ -1,4 +1,5 @@
 with Hashing.Generic_Hash_Table;
+with Hashing.Performance; use Hashing.Performance;
 package Hashing.Common is
 
     function H(key : Integer; size : Natural) return Integer; 
