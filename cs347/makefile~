@@ -21,3 +21,5 @@ encrypt: encrypt.o
 htod: htod.o
 	$(CC) $(CCFLAGS) $? $(LIBS) -o $@
 
+dtoh: dtoh.o
+	$(CC) $(CCFLAGS) $? $(LIBS) -o $@

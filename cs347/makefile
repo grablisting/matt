@@ -14,6 +14,7 @@ LIBS = $(LIBDIR)/driver.c $(LIBDIR)/asm_io.o $(LIBDIR)/cdecl.h
 all:
 	make encrypt
 	make htod
+	make dtoh
 
 encrypt: encrypt.o
 	$(CC) $(CCFLAGS) $? $(LIBS) -o $@
@@ -21,3 +22,5 @@ encrypt: encrypt.o
 htod: htod.o
 	$(CC) $(CCFLAGS) $? $(LIBS) -o $@
 
+dtoh: dtoh.o
+	$(CC) $(CCFLAGS) $? $(LIBS) -o $@
