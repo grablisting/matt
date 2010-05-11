@@ -9,10 +9,11 @@ segment .data
 ;
 ; initialized data is put in the data segment here
 ;
-enc_table db "4695031872"
-intro_msg db "Encryption program:",LF,0 ; First message to display
+enc_table    db "4695031872"
+intro_msg    db "Encryption program:",LF,0 ; First message to display
 finished_msg db "Encrypted string: ", 0 ; To display after encryption
-prompt1 db "Enter a string to encrypt: ",0 ; prompt for string
+prompt1      db "Enter a string to encrypt: ",0 ; prompt for string
+prompt2      db "Do you want to terminate the program? (y/n) ",0 ; Prompt for exitting the program
 
 segment .bss
 ;
@@ -30,6 +31,7 @@ asm_main:
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; Print Program Message
+main:
 	mov    eax, intro_msg ; Get intro message ready for printing
 	call   print_string
 
@@ -91,6 +93,26 @@ end_encrypt_loop:
 	mov    eax, LF ; Just print a LF to make it look better
 	call   print_char
 
+	mov    eax, prompt2 ; Prompt to ask whether to quit or not
+	call   print_string ; Print prompt
+
+	call   read_char ; Get users response
+	mov    ecx, eax ; Move the response into the ecx, so we can clear stdin
+
+clear_stdin:
+	call   read_char ; Get left over characters
+	cmp    al, LF ; Read until a LF
+	jne    clear_stdin ;
+
+	cmp    cl, 'y' ; Use the lower bits of the eax to compare their response
+	je     quit ; Jump back to top of program
+
+	cmp    cl, 'Y' ; If answer is upper case y,
+	je     quit ; Jump to top of program
+	
+	jmp    main
+
+quit:
         popa
         mov     eax, 0            ; return back to C
         leave                     

@@ -8,9 +8,16 @@ AS = nasm
 ASFLAGS = -f elf
 CC = gcc
 CCFLAGS = -Wall -m32
-LIBDIR = /home/matt/school/matt/cs347/nasm
+LIBDIR = ../nasm
 LIBS = $(LIBDIR)/driver.c $(LIBDIR)/asm_io.o $(LIBDIR)/cdecl.h
 
+all:
+	make encrypt
+	make htod
+
 encrypt: encrypt.o
+	$(CC) $(CCFLAGS) $? $(LIBS) -o $@
+
+htod: htod.o
 	$(CC) $(CCFLAGS) $? $(LIBS) -o $@
 

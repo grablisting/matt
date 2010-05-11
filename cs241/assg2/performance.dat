@@ -1,61 +1,8 @@
-Performance for linear-probing hash table of size  500009
-Number of Probes: 271738117
-Number of Insertions: 500009
-Average Number of Probes per Insertion: 543
-Number of Probes at Load Factor 0.00:  15578088
-Number of Probes at Load Factor 0.05:  1
-Number of Probes at Load Factor 0.10:  1
-Number of Probes at Load Factor 0.15:  1
-Number of Probes at Load Factor 0.20:  1
-Number of Probes at Load Factor 0.25:  1
-Number of Probes at Load Factor 0.30:  1
-Number of Probes at Load Factor 0.35:  1
-Number of Probes at Load Factor 0.40:  1
-Number of Probes at Load Factor 0.45:  1
-Number of Probes at Load Factor 0.50:  1
-Number of Probes at Load Factor 0.55:  2
-Number of Probes at Load Factor 0.60:  2
-Number of Probes at Load Factor 0.65:  3
-Number of Probes at Load Factor 0.70:  4
-Number of Probes at Load Factor 0.75:  5
-Number of Probes at Load Factor 0.80:  8
-Number of Probes at Load Factor 0.85:  12
-Number of Probes at Load Factor 0.90:  24
-Number of Probes at Load Factor 0.95:  74
-Number of Probes at Load Factor 1.00:  10717
-Hash table filled?: yes
-
-Performance for quadratic-probing hash table of size  500009
-Number of Probes: 6641214
-Number of Insertions: 500008
-Average Number of Probes per Insertion: 13
-Number of Probes at Load Factor 0.00:  15578128
-Number of Probes at Load Factor 0.05:  1
-Number of Probes at Load Factor 0.10:  1
-Number of Probes at Load Factor 0.15:  1
-Number of Probes at Load Factor 0.20:  1
-Number of Probes at Load Factor 0.25:  1
-Number of Probes at Load Factor 0.30:  1
-Number of Probes at Load Factor 0.35:  1
-Number of Probes at Load Factor 0.40:  1
-Number of Probes at Load Factor 0.45:  1
-Number of Probes at Load Factor 0.50:  1
-Number of Probes at Load Factor 0.55:  2
-Number of Probes at Load Factor 0.60:  2
-Number of Probes at Load Factor 0.65:  2
-Number of Probes at Load Factor 0.70:  3
-Number of Probes at Load Factor 0.75:  3
-Number of Probes at Load Factor 0.80:  4
-Number of Probes at Load Factor 0.85:  5
-Number of Probes at Load Factor 0.90:  8
-Number of Probes at Load Factor 0.95:  14
-Hash table filled?: no
-
-Performance for cubic-probing hash table of size  500009
-Number of Probes: 5483822
-Number of Insertions: 500009
-Average Number of Probes per Insertion: 10
-Number of Probes at Load Factor 0.00:  15578128
+Performance for linear-probing hash table of size  1000003
+Number of Probes: 334050875
+Number of Insertions: 1000003
+Average Number of Probes per Insertion: 334
+Number of Probes at Load Factor 0.00:  0
 Number of Probes at Load Factor 0.05:  1
 Number of Probes at Load Factor 0.10:  1
 Number of Probes at Load Factor 0.15:  1
@@ -69,20 +16,20 @@ Number of Probes at Load Factor 0.50:  1
 Number of Probes at Load Factor 0.55:  1
 Number of Probes at Load Factor 0.60:  2
 Number of Probes at Load Factor 0.65:  2
-Number of Probes at Load Factor 0.70:  2
-Number of Probes at Load Factor 0.75:  3
-Number of Probes at Load Factor 0.80:  4
-Number of Probes at Load Factor 0.85:  5
-Number of Probes at Load Factor 0.90:  7
-Number of Probes at Load Factor 0.95:  13
-Number of Probes at Load Factor 1.00:  161
+Number of Probes at Load Factor 0.70:  3
+Number of Probes at Load Factor 0.75:  4
+Number of Probes at Load Factor 0.80:  5
+Number of Probes at Load Factor 0.85:  9
+Number of Probes at Load Factor 0.90:  16
+Number of Probes at Load Factor 0.95:  49
+Number of Probes at Load Factor 1.00:  6574
 Hash table filled?: yes
 
-Performance for beaty-probing hash table of size  500009
-Number of Probes: 67612354
-Number of Insertions: 491131
-Average Number of Probes per Insertion: 137
-Number of Probes at Load Factor 0.00:  15578128
+Performance for quadratic-probing hash table of size  1000003
+Number of Probes: 12875217
+Number of Insertions: 1000003
+Average Number of Probes per Insertion: 12
+Number of Probes at Load Factor 0.00:  15553536
 Number of Probes at Load Factor 0.05:  1
 Number of Probes at Load Factor 0.10:  1
 Number of Probes at Load Factor 0.15:  1
@@ -92,13 +39,66 @@ Number of Probes at Load Factor 0.30:  1
 Number of Probes at Load Factor 0.35:  1
 Number of Probes at Load Factor 0.40:  1
 Number of Probes at Load Factor 0.45:  1
+Number of Probes at Load Factor 0.50:  1
+Number of Probes at Load Factor 0.55:  1
+Number of Probes at Load Factor 0.60:  1
+Number of Probes at Load Factor 0.65:  2
+Number of Probes at Load Factor 0.70:  2
+Number of Probes at Load Factor 0.75:  3
+Number of Probes at Load Factor 0.80:  3
+Number of Probes at Load Factor 0.85:  4
+Number of Probes at Load Factor 0.90:  7
+Number of Probes at Load Factor 0.95:  13
+Number of Probes at Load Factor 1.00:  204
+Hash table filled?: yes
+
+Performance for cubic-probing hash table of size  1000003
+Number of Probes: 12298568
+Number of Insertions: 1000002
+Average Number of Probes per Insertion: 12
+Number of Probes at Load Factor 0.00:  15553536
+Number of Probes at Load Factor 0.05:  1
+Number of Probes at Load Factor 0.10:  1
+Number of Probes at Load Factor 0.15:  1
+Number of Probes at Load Factor 0.20:  1
+Number of Probes at Load Factor 0.25:  1
+Number of Probes at Load Factor 0.30:  1
+Number of Probes at Load Factor 0.35:  1
+Number of Probes at Load Factor 0.40:  1
+Number of Probes at Load Factor 0.45:  1
+Number of Probes at Load Factor 0.50:  1
+Number of Probes at Load Factor 0.55:  1
+Number of Probes at Load Factor 0.60:  1
+Number of Probes at Load Factor 0.65:  2
+Number of Probes at Load Factor 0.70:  2
+Number of Probes at Load Factor 0.75:  2
+Number of Probes at Load Factor 0.80:  3
+Number of Probes at Load Factor 0.85:  4
+Number of Probes at Load Factor 0.90:  7
+Number of Probes at Load Factor 0.95:  12
+Hash table filled?: no
+
+Performance for beaty-probing hash table of size  1000003
+Number of Probes: 358805762
+Number of Insertions: 864615
+Average Number of Probes per Insertion: 414
+Number of Probes at Load Factor 0.00:  15553536
+Number of Probes at Load Factor 0.05:  1
+Number of Probes at Load Factor 0.10:  1
+Number of Probes at Load Factor 0.15:  1
+Number of Probes at Load Factor 0.20:  1
+Number of Probes at Load Factor 0.25:  1
+Number of Probes at Load Factor 0.30:  1
+Number of Probes at Load Factor 0.35:  1
+Number of Probes at Load Factor 0.40:  1
+Number of Probes at Load Factor 0.45:  2
 Number of Probes at Load Factor 0.50:  2
-Number of Probes at Load Factor 0.55:  2
-Number of Probes at Load Factor 0.60:  2
-Number of Probes at Load Factor 0.65:  3
-Number of Probes at Load Factor 0.70:  4
-Number of Probes at Load Factor 0.75:  5
-Number of Probes at Load Factor 0.80:  7
-Number of Probes at Load Factor 0.85:  12
-Number of Probes at Load Factor 0.90:  26
-Number of Probes at Load Facto
+Number of Probes at Load Factor 0.55:  3
+Number of Probes at Load Factor 0.60:  4
+Number of Probes at Load Factor 0.65:  6
+Number of Probes at Load Factor 0.70:  11
+Number of Probes at Load Factor 0.75:  18
+Number of Probes at Load Factor 0.80:  42
+Number of Probes at Load Factor 0.85:  266
+Hash table filled?: no
+
