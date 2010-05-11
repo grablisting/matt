@@ -1,0 +1,21 @@
+Graph 1:
+    -> total probes to fill(or not) hash table
+    -> x-axis: size of table
+    -> y-axis: number of probes
+    -> line-graph: type of probing function
+
+graph 2
+    -> average probes per insertion 
+    -> x-axis: size of table
+    -> y-axis: number of probes
+    -> line-graph: type of probing function
+
+Graph 3-7
+    -> probes at a given load factor
+    -> one graph per size of table
+    -> x-axis: load factor
+    -> y-axis: number of probes
+    -> line-graph: type of probing function
+ 
+
+

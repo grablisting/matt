@@ -1,0 +1,148 @@
+V "GNAT Lib v4.4"
+P SS ZX
+R nnnvnnnnnnnnnnnnnnnnnvvvnnnnvnnnnnnnnnvnnvnnnnnnnnnnvnnvnnnnvnnnnnnnnnnnnnnnn
+
+U hashing.performance%b	hashing-performance.adb	4049e35f NE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
+W ada.long_long_integer_text_io%s  a-llitio.ads	a-llitio.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.unchecked_deallocation%s
+W hashing%s		hashing.adb		hashing.ali
+W interfaces%s		interfac.ads		interfac.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.string_ops%s	s-strops.adb		s-strops.ali
+
+U hashing.performance%s	hashing-performance.ads	fd141811 EE OO PK
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.unchecked_deallocation%s
+W generic_linked_list%s	generic_linked_list.adb	generic_linked_list.ali  AD
+W hashing%s		hashing.adb		hashing.ali
+W system%s		system.ads		system.ali
+W system.exception_table%s  s-exctab.adb	s-exctab.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-except.ads		20090409232307 b54b55de
+D a-finali.ads		20090409232307 9eaacebd
+D a-filico.ads		20090409232307 9299732a
+D a-flteio.ads		20070406091342 3407344a
+D a-ioexce.ads		20070406091342 be0900a0
+D a-llitio.ads		20070406091342 a7e55a31
+D a-stream.ads		20090409232307 34aca5be
+D a-tags.ads		20090409232307 bfa07446
+D a-textio.ads		20090409232307 fe8af46e
+D a-tiflio.ads		20090409232307 5d91823c
+D a-tiinio.ads		20090409232307 949a7272
+D a-unccon.ads		20070406091342 51e09df2
+D a-uncdea.ads		20070406091342 dc667e6d
+D generic_linked_list.ads  20100507160901 3432f07b
+D generic_linked_list.adb  20100507160901 d305cccb
+D hashing.ads		20100508195122 3c2f7957
+D hashing-performance.ads  20100508041154 0b836553
+D hashing-performance.adb  20100508041703 fac46274
+D interfac.ads		20090409232307 a69cad5c
+D i-cstrea.ads		20090409232307 e1e064a9
+D system.ads		20091005122523 15e10948
+D s-crtl.ads		20090409232307 997234a1
+D s-exctab.ads		20090409232307 5c1c61ae
+D s-ficobl.ads		20090409232307 8bb681e5
+D s-finimp.ads		20090409232307 9449f4cb
+D s-finroo.ads		20090409232307 1408f9d1
+D s-imgint.ads		20090409232307 f77d133c
+D s-parame.ads		20090409232307 f32e56e9
+D s-secsta.ads		20090409232307 7bae3621
+D s-soflin.ads		20090409232307 0c6fd39d
+D s-stache.ads		20090409232307 257b3be8
+D s-stalib.ads		20090409232307 52b793d5
+D s-stoele.ads		20090409232307 ed966df3
+D s-stoele.adb		20090409232307 e9998c78
+D s-stratt.ads		20090409232307 fef7c1da
+D s-strops.ads		20090409232307 845f72d2
+D s-sopco3.ads		20090409232307 72ce1063
+D s-sopco4.ads		20090409232307 bc112723
+D s-sopco5.ads		20090409232307 191315e8
+D s-traent.ads		20090409232307 bd5f2753
+D s-unstyp.ads		20090409232307 c0f9fae5
+D s-wchcon.ads		20090409232307 ab028799
+X 1 ada.ads
+16K9*Ada 19e8 18|1r6 1r23 19|1r6 1r23 2r6 2r29 3r6 3r41 4r6 10r50
+X 5 a-flteio.ads
+20K13*Float_Text_IO[11|45] 19|2w10 2r33
+X 7 a-llitio.ads
+18K13*Long_Long_Integer_Text_IO[12|45] 19|3w10 3r45
+X 10 a-textio.ads
+48K13*Text_IO 506e16 18|1w10 1r27 19|1w10 1r27
+51P9*File_Type(369R9) 18|15r88 19|43r18 48r88
+118V13*Standard_Output{51P9} 19|43r31
+165U14*New_Line 19|65r9 68r9 71r9 78r13 89r9
+241U14*Put 19|53r9 55r35 56r38 57r34 58r34 59r28 61r9 63r9 66r9 69r9 75r13
+. 77r13 83r9 85r13 87r13
+259U14*Put_Line 19|62r9
+X 11 a-tiflio.ads
+60U14*Put 19|76r13[5|20]
+X 12 a-tiinio.ads
+59U14*Put 19|64r9[7|18] 67r9[7|18] 70r9[7|18]
+X 14 a-uncdea.ads
+20u15*Unchecked_Deallocation 19|4w10 10r54
+X 15 generic_linked_list.ads
+7k9*Generic_Linked_List 47e24 18|2w6 22r29
+9R10*list
+10P10*listPtr(9R10[18|22]) 18|30r44[22] 19|8r23[18|22] 50r25[18|22]
+18V14*value{integer} 19|77r53[18|22]
+21V14*next{10P10[18|22]} 19|80r30[18|22]
+29U15*insert_last 19|32r18[18|22]
+X 17 hashing.ads
+3K9*Hashing 10e12 18|4r9 35r5 19|6r14 104r5
+4E10*ProbingMethod 4e97 18|18r51 26r29 19|93r51
+4n28*LinearProbing{4E10} 19|55r18
+4n43*QuadraticProbing{4E10} 19|56r18
+4n61*CubicProbing{4E10} 19|57r18
+4n75*BeatyProbing{4E10} 19|58r18
+4n89*Unknown{4E10} 18|26r46
+X 18 hashing-performance.ads
+4K17*Performance 17|3k9 18|35l13 35e24 19|6b22 104l13 104t24
+5R10*PerformanceRecord_Type 6r38 24c10 32e19 19|10r77 98r24
+6P10*PerformanceRecord(5R10) 8r42 9r45 10r50 12r38 14r57 15r55 16r37 19r69
+. 19|10r101 11r37 17r42 23r45 29r50 35r39 41r57 48r55 94r69 96r19
+8U15*AddProbes 8=25 8>61 19|17b15 21l9 21t18
+8p25 pRecord{6P10} 19|17b25 20r9 20r30
+8i61 probes{natural} 19|17b61 20r68
+9U15*AddInsertion 9=28 19|23b15 27l9 27t21
+9p28 pRecord{6P10} 19|23b28 26r9 26r34
+10U15*AddLoadFactorStat 10=33 10>69 19|29b15 33l9 33t26
+10p33 pRecord{6P10} 19|29b33 32r30
+10i69 probes{natural} 19|29b69 32r59
+12V14*LoadFactorGap{integer} 12>28 19|35b14 39l9 39t22
+12p28 pRecord{6P10} 19|35b28 38r16
+14U15*DisplayPerformanceRecord 14=40 19|41b15 46l9 46t33
+14p40 pRecord{6P10} 19|41b40 45m32
+15U15*WritePerformanceRecord 15=38 15=74 19|45r9 48b15 91l9 91t31
+15p38 pRecord{6P10} 19|48b38 54r14 62r38 64r19 67r19 70r20 70r40 73r17 79r54
+. 84r12 84r55
+15p74 file{10|51P9} 19|48b74 53r13 55r39 56r42 57r38 58r38 59r32 61r13 62r18
+. 63r13 64r13 65r18 66r13 67r13 68r18 69r13 70r13 71r18 75r17 76r17 77r17
+. 78r22 83r13 85r17 87r17 89r18
+16U15*Free 16=20 19|11b15 15l9 15t13
+16p20 pRecord{6P10} 19|11b20 14m37
+18V14*NewPerformanceRecord{6P10} 18>35 19>35 19|93b14 102l9 102t29
+18e35 typeOfProbing{17|4E10} 19|93b35 99r34
+19i35 sizeOfHashTable{integer} 19|94b35 100r36
+22K13 Int_List[15|7] 30r35 19|8r14 32r9 50r16 77r44 80r21
+26e13*TypeOfProbing{17|4E10} 19|54r22 99m17
+27i13*SizeOfHashTable{integer} 19|62r46 84r63 100m17
+28i13*NumProbes{long_long_integer} 19|20m17 20r38 64r27 70r28
+29i13*NumInsertions{long_long_integer} 19|26m17 26r42 67r27 70r48 84r20
+30p13*ProbesPerLoadFactor{15|10P10[22]} 19|32m38 73r25
+31i13*LoadFactorGap{integer} 19|38r24 79r62
+X 19 hashing-performance.adb
+10U15 DeallocatePerformanceRecord[14|20] 14r9
+43p9 stdout{10|51P9} 45m41
+50p9 iter{15|10P10[18|22]} 73m9 74r15 77r59 80m13 80r35
+51i9 currentLoadFactor{integer} 76r29 79m13 79r34
+96p9 pRecord{18|6P10} 98m9 99r9 100r9 101r16
+

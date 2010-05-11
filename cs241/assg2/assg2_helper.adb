@@ -1,6 +1,7 @@
 with Ada.Text_IO; use Ada.Text_IO;
 with Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
 with Hashing; use Hashing;
+with Hashing.Performance; use Hashing.Performance;
 with Hashing.Common; use Hashing.Common;
 with Hashing.Generic_Hash_Table;
 
@@ -48,7 +49,7 @@ package body Assg2_Helper is
 		get(item);
 		exit;
 	    exception
-		when others => null;
+		when others => skip_line;
 	    end;
 	end loop;
     end GetRobust;
@@ -73,6 +74,7 @@ package body Assg2_Helper is
 	DisplayPerformanceRecord(pRecord);
 	WritePerformanceRecord(pRecord, outFile);
 	Free(pRecord);
+	Linear_Hash_Table.Free(linearTable);
 	new_line;
 	put_line("Test complete.");
 
@@ -81,6 +83,7 @@ package body Assg2_Helper is
 	DisplayPerformanceRecord(pRecord);
 	WritePerformanceRecord(pRecord, outFile);
 	Free(pRecord);
+	Quadratic_Hash_Table.Free(quadraticTable);
 	new_line;
 	put_line("Test complete.");
 
@@ -89,6 +92,7 @@ package body Assg2_Helper is
 	DisplayPerformanceRecord(pRecord);
 	WritePerformanceRecord(pRecord, outFile);
 	Free(pRecord);
+	Cubic_Hash_Table.Free(cubicTable);
 	new_line;
 	put_line("Test complete.");
 
@@ -97,6 +101,7 @@ package body Assg2_Helper is
 	DisplayPerformanceRecord(pRecord);
 	WritePerformanceRecord(pRecord, outFile);
 	Free(pRecord);
+	Beaty_Hash_Table.Free(beatyTable);
 	new_line;
 	put_line("Test complete.");
 	

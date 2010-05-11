@@ -1,44 +1,45 @@
 V "GNAT Lib v4.4"
 P SS ZX
-R nnnnnnnvnnnnnnnnnnnnnvvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+R nnnnnnnvnnnnnnnvnnvnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
 
-U hashing.common%b	hashing-common.adb	67ce4c4d NE OO PK
+U hashing.common%b	hashing-common.adb	9293d47d NE OO PK
 W ada%s			ada.ads			ada.ali
-W ada.float_text_io%s	a-flteio.ads		a-flteio.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W hashing%s		hashing.adb		hashing.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
 
-U hashing.common%s	hashing-common.ads	a9c926ab EE NE OO PK
+U hashing.common%s	hashing-common.ads	839b891d EE NE OO PK
 W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W ada.unchecked_deallocation%s
 W hashing%s		hashing.adb		hashing.ali
 W hashing.generic_hash_table%s  hashing-generic_hash_table.adb  hashing-generic_hash_table.ali  AD
+W hashing.performance%s	hashing-performance.adb	hashing-performance.ali
 W interfaces%s		interfac.ads		interfac.ali
 
 D ada.ads		20070406091342 9c7dd3ea
 D a-except.ads		20090409232307 b54b55de
 D a-finali.ads		20090409232307 9eaacebd
 D a-filico.ads		20090409232307 9299732a
-D a-flteio.ads		20070406091342 3407344a
 D a-inteio.ads		20070406091342 03bc737c
 D a-ioexce.ads		20070406091342 be0900a0
 D a-stream.ads		20090409232307 34aca5be
 D a-tags.ads		20090409232307 bfa07446
 D a-textio.ads		20090409232307 fe8af46e
-D a-tiflio.ads		20090409232307 5d91823c
 D a-tiinio.ads		20090409232307 949a7272
 D a-unccon.ads		20070406091342 51e09df2
 D a-uncdea.ads		20070406091342 dc667e6d
-D generic_linked_list.ads  20100506083058 3432f07b
-D hashing.ads		20100506091259 14812fc1
-D hashing-common.ads	20100506090039 a1ae7200
-D hashing-common.adb	20100506091413 1bd0a2d4
-D hashing-generic_hash_table.ads  20100506082026 1ce67b6a
-D hashing-generic_hash_table.adb  20100506082315 1096fb73
+D generic_linked_list.ads  20100507160901 3432f07b
+D hashing.ads		20100508195122 3c2f7957
+D hashing-common.ads	20100507164452 1e2cc238
+D hashing-common.adb	20100508211148 4da6e800
+D hashing-generic_hash_table.ads  20100508193711 aa1b5721
+D hashing-generic_hash_table.adb  20100508193348 5d31b087
+D hashing-performance.ads  20100508041154 0b836553
 D interfac.ads		20090409232307 a69cad5c
 D i-cstrea.ads		20090409232307 e1e064a9
 D system.ads		20091005122523 15e10948
@@ -59,103 +60,111 @@ D s-traent.ads		20090409232307 bd5f2753
 D s-unstyp.ads		20090409232307 c0f9fae5
 D s-wchcon.ads		20090409232307 ab028799
 X 1 ada.ads
-16K9*Ada 19e8 18|2r6 2r23 3r6 3r29 4r6 4r31
-X 5 a-flteio.ads
-20K13*Float_Text_IO[11|45] 18|3w10 3r33
-X 6 a-inteio.ads
-18K13*Integer_Text_IO[12|45] 18|4w10 4r35
-X 10 a-textio.ads
-48K13*Text_IO 506e16 18|2w10 2r27
-51P9*File_Type(369R9) 17|36r47 40r47 44r47 48r47 18|39r47 66r47 93r47 120r47
-101U14*Reset 18|48r9 75r9 102r9 129r9
-183V13*End_Of_File{boolean} 18|50r63 77r66 104r62 131r62
-X 12 a-tiinio.ads
-50U14*Get 18|51r13[6|18] 78r13[6|18] 105r13[6|18] 132r13[6|18]
-X 16 hashing.ads
-4K9*Hashing 37e12 17|1r6 2r9 51r5 18|1w6 1r19 6r14 147r5
-6P10*PerformanceRecord(5R10) 17|37r47 41r47 45r47 49r47 18|40r47 67r47 94r47
-. 121r47
-7n28*LinearProbing{7E10} 17|12r72
-7n43*QuadraticProbing{7E10} 17|18r75
-7n61*CubicProbing{7E10} 17|24r71
-7n75*BeatyProbing{7E10} 17|30r71
-10U15*AddProbes 18|53r13 80r13 107r13 134r13
-11U15*AddInsertion 18|55r17 82r17 109r17 136r17
-12U15*AddLoadFactorStat 18|59r17 86r17 113r17 140r17
-31f13*LoadFactorGap{float} 18|47r37 58r64 74r37 85r64 101r37 112r64 128r37
-. 139r64
-34V14 NewPerformanceRecord{6P10} 18|46r20 73r20 100r20 127r20
-X 17 hashing-common.ads
-2K17*Common 16|4k9 17|51l13 51e19 18|6b22 147l13 147t19
-4V14*H{integer} 4>16 4>31 13r60 19r63 25r59 31r59 18|8b14 12l9 12t10
-4i16 key{integer} 18|8b16 11r17
-4i31 size{natural} 18|8b31 11r25
-6V14*LinearProbe{integer} 6>26 6>41 6>58 14r64 18|14b14 18l9 18t20
-6i26 key{integer} 18|14b26 17r18
-6i41 tries{natural} 18|14b41 17r24
-6i58 size{natural} 18|14b58 17r35
-7V14*QuadraticProbe{integer} 7>29 7>44 7>61 20r67 18|20b14 24l9 24t23
-7i29 key{integer} 18|20b29 23r18
-7i44 tries{natural} 18|20b44 23r24
-7i61 size{natural} 18|20b61 23r38
-8V14*CubicProbe{integer} 8>25 8>40 8>57 26r63 18|26b14 30l9 30t19
-8i25 key{integer} 18|26b25 29r18
-8i40 tries{natural} 18|26b40 29r24
-8i57 size{natural} 18|26b57 29r38
-9V14*BeatyProbe{integer} 9>25 9>40 9>57 32r63 18|32b14 36l9 36t19
-9i25 key{integer} 18|32b25 35r18
-9i40 tries{natural} 18|32b40 35r24
-9i57 size{natural} 18|32b57 35r38
-11K13*Linear_Hash_Table[19|6] 35r48 18|38r49 46r41 46r70 50r21 52r23 54r25
-. 57r16
-17K13*Quadratic_Hash_Table[19|6] 39r48 18|65r49 73r41 73r73 77r21 79r23 81r25
-. 84r16
-23K13*Cubic_Hash_Table[19|6] 43r48 18|92r49 100r41 100r69 104r21 106r23 108r25
-. 111r16
-29K13*Beaty_Hash_Table[19|6] 47r48 18|119r49 127r41 127r69 131r21 133r23
-. 135r25 138r16
-35U14*RunPerformanceTest 35=33 36=33 37<33 18|38b15 63l9 63t27
-35p33 table{19|9P9[11]} 18|38b34 46r93 50r46 52r48 54r48 57r45
-36p33 file{10|51P9} 18|39b33 48m15 50r75 51r17
-37p33 pRecord{16|6P10} 18|40b33 46m9 47r29 53m23 55m30 58r56 59m35
-39U14*RunPerformanceTest 39=33 40=33 41<33 18|65b15 90l9 90t27
-39p33 table{19|9P9[17]} 18|65b34 73r99 77r49 79r51 81r51 84r48
-40p33 file{10|51P9} 18|66b33 75m15 77r78 78r17
-41p33 pRecord{16|6P10} 18|67b33 73m9 74r29 80m23 82m30 85r56 86m35
-43U14*RunPerformanceTest 43=33 44=33 45<33 18|92b15 117l9 117t27
-43p33 table{19|9P9[23]} 18|92b34 100r91 104r45 106r47 108r47 111r44
-44p33 file{10|51P9} 18|93b33 102m15 104r74 105r17
-45p33 pRecord{16|6P10} 18|94b33 100m9 101r29 107m23 109m30 112r56 113m35
-47U14*RunPerformanceTest 47=33 48=33 49<33 18|119b15 144l9 144t27
-47p33 table{19|9P9[29]} 18|119b34 127r91 131r45 133r47 135r47 138r44
-48p33 file{10|51P9} 18|120b33 129m15 131r74 132r17
-49p33 pRecord{16|6P10} 18|121b33 127m9 128r29 134m23 136m30 139r56 140m35
-X 18 hashing-common.adb
-42i9 toInsert{natural} 51m23 52r55
-43i9 probes{natural} 52m13 53r32 54r16 59r44
-44f9 loadFactorTarget{float} 47m9 57r55 58m17 58r37
-69i9 toInsert{natural} 78m23 79r58
-70i9 probes{natural} 79m13 80r32 81r16 86r44
-71f9 loadFactorTarget{float} 74m9 84r58 85m17 85r37
-96i9 toInsert{natural} 105m23 106r54
-97i9 probes{natural} 106m13 107r32 108r16 113r44
-98f9 loadFactorTarget{float} 101m9 111r54 112m17 112r37
-123i9 toInsert{natural} 132m23 133r54
-124i9 probes{natural} 133m13 134r32 135r16 140r44
-125f9 loadFactorTarget{float} 128m9 138r54 139m17 139r37
-X 19 hashing-generic_hash_table.ads
-2+10 Key_Type 17|11r57 17r60 23r56 29r56
-3e5 typeOfProbing{16|7E10} 17|12r55 18r58 24r54 30r54
-4V19 H{integer} 17|13r55 19r58 25r54 31r54
-5V19 Probe{integer} 17|14r55 20r58 26r54 32r54
-6k17*Generic_Hash_Table 17|1w14 11r38 17r41 23r37 29r37 19|41e31
+16K9*Ada 19e8 16|2r6 2r23 3r6 3r31
+X 5 a-inteio.ads
+18K13*Integer_Text_IO[10|45] 16|3w10 3r35
+X 9 a-textio.ads
+48K13*Text_IO 506e16 16|2w10 2r27
+51P9*File_Type(369R9) 15|37r47 41r47 45r47 49r47 16|38r47 78r47 118r47 158r47
+101U14*Reset 16|51r9 91r9 131r9 171r9
+183V13*End_Of_File{boolean} 16|53r63 93r66 133r62 173r62
+X 10 a-tiinio.ads
+50U14*Get 16|54r13[5|18] 94r13[5|18] 134r13[5|18] 174r13[5|18]
+X 14 hashing.ads
+3K9*Hashing 10e12 15|1r6 2r6 2r31 3r9 52r5 16|1w6 1r19 5r14 199r5
+4n28*LinearProbing{4E10} 15|13r72
+4n43*QuadraticProbing{4E10} 15|19r75
+4n61*CubicProbing{4E10} 15|25r71
+4n75*BeatyProbing{4E10} 15|31r71
+6X5*Duplicate_Exception 16|72r22 112r22 152r22 192r22
+X 15 hashing-common.ads
+3K17*Common 14|3k9 15|52l13 52e19 16|5b22 199l13 199t19
+5V14*H{integer} 5>16 5>31 14r60 20r63 26r59 32r59 16|7b14 11l9 11t10
+5i16 key{integer} 16|7b16 10r16
+5i31 size{natural} 16|7b31
+7V14*LinearProbe{integer} 7>26 7>41 7>58 15r64 16|13b14 17l9 17t20
+7i26 key{integer} 16|13b26 16r18
+7i41 tries{natural} 16|13b41 16r24
+7i58 size{natural} 16|13b58 16r35
+8V14*QuadraticProbe{integer} 8>29 8>44 8>61 21r67 16|19b14 23l9 23t23
+8i29 key{integer} 16|19b29 22r18
+8i44 tries{natural} 16|19b44 22r24
+8i61 size{natural} 16|19b61 22r38
+9V14*CubicProbe{integer} 9>25 9>40 9>57 27r63 16|25b14 29l9 29t19
+9i25 key{integer} 16|25b25 28r18
+9i40 tries{natural} 16|25b40 28r24
+9i57 size{natural} 16|25b57 28r38
+10V14*BeatyProbe{integer} 10>25 10>40 10>57 33r63 16|31b14 35l9 35t19
+10i25 key{integer} 16|31b25 34r18
+10i40 tries{natural} 16|31b40 34r24
+10i57 size{natural} 16|31b57 34r38
+12K13*Linear_Hash_Table[17|6] 36r48 16|37r49 47r41 47r70 53r21 56r27 57r29
+. 65r20
+18K13*Quadratic_Hash_Table[17|6] 40r48 16|77r49 87r41 87r73 93r21 96r27 97r29
+. 105r20
+24K13*Cubic_Hash_Table[17|6] 44r48 16|117r49 127r41 127r69 133r21 136r27
+. 137r29 145r20
+30K13*Beaty_Hash_Table[17|6] 48r48 16|157r49 167r41 167r69 173r21 176r27
+. 177r29 185r20
+36U14*RunPerformanceTest 36=33 37=33 38<33 16|37b15 75l9 75t27
+36p33 table{17|9P9[12]} 16|37b34 47r93 53r46 56r52 57r52 65r49
+37p33 file{9|51P9} 16|38b33 51m15 53r75 54r17
+38p33 pRecord{19|6P10} 16|39b33 47m9 58m31 59m34 66m39 69r74
+40U14*RunPerformanceTest 40=33 41=33 42<33 16|77b15 115l9 115t27
+40p33 table{17|9P9[18]} 16|77b34 87r99 93r49 96r55 97r55 105r52
+41p33 file{9|51P9} 16|78b33 91m15 93r78 94r17
+42p33 pRecord{19|6P10} 16|79b33 87m9 98m34 99m31 106m39 109r74
+44U14*RunPerformanceTest 44=33 45=33 46<33 16|117b15 155l9 155t27
+44p33 table{17|9P9[24]} 16|117b34 127r91 133r45 136r51 137r51 145r48
+45p33 file{9|51P9} 16|118b33 131m15 133r74 134r17
+46p33 pRecord{19|6P10} 16|119b33 127m9 138m34 141m31 146m39 149r74
+48U14*RunPerformanceTest 48=33 49=33 50<33 16|157b15 196l9 196t27
+48p33 table{17|9P9[30]} 16|157b34 167r91 173r45 176r51 177r51 185r48
+49p33 file{9|51P9} 16|158b33 171m15 173r74 174r17
+50p33 pRecord{19|6P10} 16|159b33 167m9 178m34 181m31 186m39 189r74
+X 16 hashing-common.adb
+41i9 toInsert{natural} 54m23 56r59
+42i9 probes{natural} 56m17 57r20 58r40 60r34
+43i9 loadFactorTarget{integer} 48m9 65r59 69m21 69r41
+44i9 avg{integer} 49m9 60m21 60r28 66r48 67m21
+45i9 section{integer} 50m9 61m21 61r32 66r54 68m21
+81i9 toInsert{natural} 94m23 96r62
+82i9 probes{natural} 96m17 97r20 99r40 100r34
+83i9 loadFactorTarget{integer} 88m9 105r62 109m21 109r41
+84i9 avg{integer} 89m9 100m21 100r28 106r48 107m21
+85i9 section{integer} 90m9 101m21 101r32 106r54 108m21
+121i9 toInsert{natural} 134m23 136r58
+122i9 probes{natural} 136m17 137r20 139r34 141r40
+123i9 loadFactorTarget{integer} 128m9 145r58 149m21 149r41
+124i9 avg{integer} 129m9 139m21 139r28 146r48 147m21
+125i9 section{integer} 130m9 140m21 140r32 146r54 148m21
+161i9 toInsert{natural} 174m23 176r58
+162i9 probes{natural} 176m17 177r20 179r34 181r40
+163i9 loadFactorTarget{integer} 168m9 185r58 189m21 189r41
+164i9 avg{integer} 169m9 179m21 179r28 186r48 187m21
+165i9 section{integer} 170m9 180m21 180r32 186r54 188m21
+X 17 hashing-generic_hash_table.ads
+2+10 Key_Type 15|12r57 18r60 24r56 30r56
+3e5 typeOfProbing{14|4E10} 15|13r55 19r58 25r54 31r54
+4V19 H{integer} 15|14r55 20r58 26r54 32r54
+5V19 Probe{integer} 15|15r55 21r58 27r54 33r54
+6k17*Generic_Hash_Table 15|1w14 12r38 18r41 24r37 30r37 17|41e31
 8R9*Hash_Table_Type
-9P9*Hash_Table(8R9[17|11]) 17|35r66[11] 39r69[17] 43r65[23] 47r65[29] 18|38r67[17|11]
-. 65r70[17|17] 92r66[17|23] 119r66[17|29]
-13V13*Insert{integer} 18|52r41[17|11] 79r44[17|17] 106r40[17|23] 133r40[17|29]
-16V13*IsFull{boolean} 18|50r39[17|11] 77r42[17|17] 104r38[17|23] 131r38[17|29]
-17V13*Size{natural} 18|46r88[17|11] 54r43[17|11] 73r94[17|17] 81r46[17|17]
-. 100r86[17|23] 108r42[17|23] 127r86[17|29] 135r42[17|29]
-20V13*LoadFactor{float} 18|57r34[17|11] 84r37[17|17] 111r33[17|23] 138r33[17|29]
-21V13*ProbeType{16|7E10} 18|46r59[17|11] 73r62[17|17] 100r58[17|23] 127r58[17|29]
+9P9*Hash_Table(8R9[15|12]) 15|36r66[12] 40r69[18] 44r65[24] 48r65[30] 16|37r67[15|12]
+. 77r70[15|18] 117r66[15|24] 157r66[15|30]
+13V13*Insert{integer} 16|56r45[15|12] 96r48[15|18] 136r44[15|24] 176r44[15|30]
+16V13*IsFull{boolean} 16|53r39[15|12] 93r42[15|18] 133r38[15|24] 173r38[15|30]
+17V13*Size{natural} 16|47r88[15|12] 57r47[15|12] 87r94[15|18] 97r50[15|18]
+. 127r86[15|24] 137r46[15|24] 167r86[15|30] 177r46[15|30]
+20V13*LoadFactor{integer} 16|65r38[15|12] 105r41[15|18] 145r37[15|24] 185r37[15|30]
+21V13*ProbeType{14|4E10} 16|47r59[15|12] 87r62[15|18] 127r58[15|24] 167r58[15|30]
+X 19 hashing-performance.ads
+4K17*Performance 15|2w14 2r39 19|35e24
+6P10*PerformanceRecord(5R10) 15|38r47 42r47 46r47 50r47 16|39r47 79r47 119r47
+. 159r47
+8U15*AddProbes 16|58r21 99r21 141r21 181r21
+9U15*AddInsertion 16|59r21 98r21 138r21 178r21
+10U15*AddLoadFactorStat 16|66r21 106r21 146r21 186r21
+12V14*LoadFactorGap{integer} 16|69r60 109r60 149r60 189r60
+18V14*NewPerformanceRecord{6P10} 16|47r20 87r20 127r20 167r20
 

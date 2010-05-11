@@ -17,7 +17,7 @@ package Hashing.Generic_Hash_Table is
    function Size(table : Hash_Table) return Natural;
    procedure Free(table : in out Hash_Table);
 
-   function LoadFactor(table : Hash_Table) return Float;
+   function LoadFactor(table : Hash_Table) return Integer;
    function ProbeType return ProbingMethod;
    
 private

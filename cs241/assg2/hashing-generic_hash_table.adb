@@ -30,7 +30,7 @@ package body Hashing.Generic_Hash_Table is
 		table.Filled := table.Filled + 1;
 		exit;
 	    elsif(table.Slots(tryIndex).Key = key) then
-		exit;
+		raise Duplicate_Exception;
 	    end if;
 	end loop;
    end Insert;
@@ -93,10 +93,10 @@ package body Hashing.Generic_Hash_Table is
 	DeallocateHashTable(table);
    end Free;
 
-   function LoadFactor(table : Hash_Table) return Float
+   function LoadFactor(table : Hash_Table) return Integer
    is
    begin
-	return (Float(table.Filled) / Float(table.Size));
+	return ((table.Filled * 100) / table.Size);
    end LoadFactor;
 
    function ProbeType return ProbingMethod
@@ -120,7 +120,7 @@ package body Hashing.Generic_Hash_Table is
 		table.Filled := table.Filled + 1;
 		exit;
 	    elsif(table.Slots(tryIndex).Key = key) then
-		exit;
+		raise Duplicate_Exception;
 	    end if;
 	end loop;
 	return tries;
