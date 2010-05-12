@@ -151,10 +151,8 @@ incr_loop:
 	jmp    process_hex_str ; Jump back up to the top of the loop
 		
 process_hex_complete:
-	mov     eax, hex_str 
-	;call    print_string
-	mov     eax, LF
-	;call    print_char
+	mov     eax, out_msg
+	call    print_string
 	mov     eax, 0
 	mov     ax, [hex_val]
 	call    print_int
@@ -175,6 +173,7 @@ run_again:
 	call   read_char
 	cmp    al, 'y'
 	je     quit
+
 	cmp    al, 'Y'
 	je     quit
 
