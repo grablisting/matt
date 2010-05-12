@@ -1,19 +1,9 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;
-; file: htod.asm
-; This program reads in a hexadecimal number and prints out
-; the decimal equivalent.
-;
-; Input: A hexadecimal number (max 4 chars), letters in 
-;        uppercase
-;
-; Output: The decimal value of the hexadecimal number.
-;
-; author: Matt Forbes
-;
-; date: 5/10/2010
-;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Matt Forbes
+; CSCI347
+; 5/12/2010
+; Convert Hexadecimal to Decimal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 %include "asm_io.inc"
 
@@ -78,15 +68,15 @@ read_complete:
 	mov     ebx, hex_str ; Point ebx back to the front of hex_str so we can process it
 
 	mov     word [hex_val], 0 ; Zero out hex_val
-	sub	byte [count], 2
-	mov     cx, 0
-	mov     cl, [count]
-	imul    cx, 4
-	shl     word [pow_sixteen], cl
-	mov     ax, [pow_sixteen]
+	sub	byte [count], 2 ; Use 2 less than the number of items pushed when calculating the power of 16
+	mov     cx, 0 ; zero out cx
+	mov     cl, [count] ; move the new count value into the cl
+	imul    cx, 4 ; multiply this number by 4, which gives us the number of shifts to apply to 16
+	shl     word [pow_sixteen], cl ; shift pow_sixteen by this number, which raises it to the right power
+	mov     ax, [pow_sixteen] ; move this value into the ax
 
 process_hex_str:
-	mov    eax, 0	
+	mov    eax, 0	; zero out the eax
 	mov    al, [ebx] ; store the current character in the al for quick reference
 
 	cmp    byte al, 0 ; Check for null terminator
@@ -102,7 +92,7 @@ continue_processing:
 
 digit:
 	sub    byte al, '0' ; Simply get the numeric value for this character, keep it in al
-	mov    byte [tmp], al
+	mov    byte [tmp], al ; store the decimal value in to tmp
 	jmp    add_hex ; Jump down now that we have numeric value
 
 not_digit:
@@ -132,43 +122,44 @@ not_lower:
 	jmp    add_hex ; Add this characters hex to the result hex value
 
 add_hex:
-	mov    ax, 0
-	mov    al, [tmp]
+	mov    ax, 0 ; zero out the ax
+	mov    al, [tmp] ; move the decimal value from above into al
 
-	cmp    word [pow_sixteen], 0
-	je     add_it
+	cmp    word [pow_sixteen], 0 ; special case when power of 16 is 0, we just want to add, not multiply
+	je     add_it ; in this case, jump ahead
 
-	mov    cx, [pow_sixteen]
-	imul   ax, cx
+	mov    cx, [pow_sixteen] ; put the current power of sixteen into the cx
+	imul   ax, cx ; multiply the decimal value by that power
 
 add_it:
-	add    word [hex_val], ax
+	add    word [hex_val], ax ; add the result to the hex value we are keeping track of
 	
 incr_loop:
 	inc    ebx ; Increment iterator
-	mov    cl, 4
-	shr    word [pow_sixteen], cl 
+	mov    cl, 4 ; put 4 in the cl
+	shr    word [pow_sixteen], cl ; shift pow_sixteen left 4 times, lowering it's power by 1
 	jmp    process_hex_str ; Jump back up to the top of the loop
 		
 process_hex_complete:
-	mov     eax, out_msg
-	call    print_string
-	mov     eax, 0
-	mov     ax, [hex_val]
-	call    print_int
-	mov     eax, LF
-	call    print_char
-	jmp     run_again
+	mov     eax, out_msg ; print out message
+	call    print_string 
+
+	mov     eax, 0 ; zero out eax 
+	mov     ax, [hex_val] ; put the calculate hex string into the ax
+	call    print_int ; print it
+	call    print_nl
+
+	jmp     run_again ; see if user wants to run the program again
 
 error:
-	mov     eax, error_msg
+	mov     eax, error_msg ; print the error message
 	call    print_string
 	mov     eax, LF
 	call    print_char
 	jmp     run_again
 	
-run_again:
-	mov    eax, again_prompt
+run_again: 
+	mov    eax, again_prompt ; see if the user wants to run the program again
 	call   print_string
 	call   read_char
 	cmp    al, 'y'
