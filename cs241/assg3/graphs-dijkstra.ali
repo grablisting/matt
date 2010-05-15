@@ -1,0 +1,80 @@
+V "GNAT Lib v4.3"
+P SS ZX
+R nnnnnnnnnnnnnnnnnnnnnnvvnnvnnnnnnnnnnnnvnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnn
+
+U graphs.dijkstra%b	graphs-dijkstra.adb	ca71df8b NE PK
+W ada%s			ada.ads			ada.ali
+W ada.unchecked_deallocation%s
+W graphs%s		graphs.adb		graphs.ali
+
+U graphs.dijkstra%s	graphs-dijkstra.ads	3e8c569c EE NE PK
+W graphs%s		graphs.adb		graphs.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-except.ads		20070606104609 ba3e26e2
+D a-finali.ads		20070606101851 9eaacebd
+D a-filico.ads		20051115140645 9299732a
+D a-ioexce.ads		20070406091342 be0900a0
+D a-stream.ads		20061031174905 34aca5be
+D a-tags.ads		20071213102130 e10285b3
+D a-textio.ads		20071213102052 bc6e78fe
+D a-unccon.ads		20070406091342 51e09df2
+D a-uncdea.ads		20070406091342 dc667e6d
+D generic_linked_list.ads  20100515202745 3432f07b
+D graphs.ads		20100515210151 4d8d5e91
+D graphs-dijkstra.ads	20100515211102 7301080d
+D graphs-dijkstra.adb	20100515211032 6516a9eb
+D interfac.ads		20051209172227 a69cad5c
+D i-cstrea.ads		20070406092312 e1e064a9
+D system.ads		20090825132209 28071540
+D s-crtl.ads		20070406092312 ef997abb
+D s-exctab.ads		20070912115821 5c1c61ae
+D s-ficobl.ads		20070814084926 8bb681e5
+D s-finimp.ads		20070606101344 9449f4cb
+D s-finroo.ads		20070814084926 1408f9d1
+D s-parame.ads		20070814084525 f32e56e9
+D s-secsta.ads		20070912115821 7bae3621
+D s-soflin.ads		20071213103411 2b67bae6
+D s-stache.ads		20070912115821 257b3be8
+D s-stalib.ads		20070912115821 9ac44ca2
+D s-stoele.ads		20070912115821 1104c881
+D s-stoele.adb		20071213103502 e9998c78
+D s-stratt.ads		20070406092920 b4bf338e
+D s-traent.ads		20070912115821 bd5f2753
+D s-unstyp.ads		20070912115821 c0f9fae5
+D s-wchcon.ads		20071213102052 ab028799
+X 1 ada.ads
+16K9*Ada 19e8 14|1r6 5r43 6r45
+X 8 a-textio.ads
+53P9*File_Type(345R9) 13|6r45 14|22r45
+119V13*Standard_Input{53P9} 14|31r29
+X 10 a-uncdea.ads
+20u15*Unchecked_Deallocation 14|1w10 5r47 6r49
+X 12 graphs.ads
+5K9*Graphs 51e11 13|1r9 25r5 14|3r14 35r5
+10P10*WeightedGraph(37R10) 13|5r35 14|15r35
+11R10*GraphPath 34e19 13|15r55
+X 13 graphs-dijkstra.ads
+1K16*Dijkstra 12|5k9 13|25l12 25e20 14|3b21 35l12 35t20
+3R10*DijkstraResult 5r57 6r65 7r49 8r36 18c10 22e19 14|8r36 15r57 17r18 22r65
+. 28r49
+5V14*RunDijkstras{3R10} 5>27 14|15b14 20l9 20t21
+5p27 graph{12|10P10} 14|15b27
+6U15*WriteDijkstraResult 6>35 6>56 14|22b15 26l9 26t28 31r9
+6p35 file{8|53P9} 14|22b35
+6r56 result{3R10} 14|22b56
+7U15*DisplayDijkstraResult 7>37 14|28b15 32l9 32t30
+7r37 result{3R10} 14|28b37 31r45
+8U15*Free 8=20 14|8b15 13l9 13t13
+8r20 result{3R10} 14|8b20 11m32 12m30
+12A10 LengthTable_Type(natural)<integer><integer> 13r32 14|6r72
+13P10 LengthTable(12A10) 20r23 14|6r90
+15A10 PathTable_Type(12|11R10)<integer> 16r30 14|5r70
+16P10 PathTable(15A10) 21r21 14|5r86
+20p13*lengths{13P10} 14|11m39
+21p13*paths{16P10} 14|12m37
+X 14 graphs-dijkstra.adb
+5U15 Deallocate_PathTable[10|20] 12r9
+6U15 Deallocate_LengthTable[10|20] 11r9
+17r9 result{13|3R10} 19r16
+

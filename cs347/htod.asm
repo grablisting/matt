@@ -1,21 +1,11 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;
-; file: htod.asm
-; This program reads in a hexadecimal number and prints out
-; the decimal equivalent.
-;
-; Input: A hexadecimal number (max 4 chars), letters in 
-;        uppercase
-;
-; Output: The decimal value of the hexadecimal number.
-;
-; author: Matt Forbes
-;
-; date: 5/10/2010
-;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Matt Forbes
+; CSCI 347
+; 5/10/2010
+; Convert Hexadecimal to Decimal
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-%include "asm_io.inc"
+%include "libs/asm_io.inc"
 
 MAX_HEX     equ     5
 LF	    equ	    0Ah
