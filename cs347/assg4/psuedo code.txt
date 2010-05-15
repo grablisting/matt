@@ -1,0 +1,20 @@
+1. read string in
+   *add nul terminator
+2. call remove_spaces on input string
+3. print new string
+
+remove_spaces:
+1. use temp string to store transformed string
+2. copy the temp string over to input string *own function
+3. return
+
+remove_spaces:
+1. declare temp string of 80 bytes
+2. loop through input string
+    a. if read_space, jump to check_char
+       else write the current byte to temp, and inc it's pointer
+    b. compare current byte with ' '
+	   if equal, set read_space to 1, else set to 0
+	c. if current byte is not LF, jump to top
+3. copy_string input_string, temp
+4. return
