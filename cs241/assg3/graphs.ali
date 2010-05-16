@@ -1,14 +1,21 @@
-V "GNAT Lib v4.3"
+V "GNAT Lib v4.4"
 P SS ZX
-R nnnvnnnnnnnnnnnnnnnnnnvvnnnnvnnnnnnnnnnvnnnnnnnnnvnnnnnnvnnnnnnnnnnnnnnnn
+R nnnvnnnvnnnnnnnnnnnnnnvvnnnnvnnvnnnnnnnnnvnnnnnnnnnnvnnvnnnnvnnnnnnnnnnnnnnnn
 
-U graphs%b		graphs.adb		8bb57d83 NE PK
+U graphs%b		graphs.adb		185462b3 NE OO PK
 W ada%s			ada.ads			ada.ali
+W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
+W ada.strings%s		a-string.ads		a-string.ali
+W ada.strings.unbounded%s  a-strunb.adb		a-strunb.ali
 W ada.text_io%s		a-textio.adb		a-textio.ali
 W ada.unchecked_deallocation%s
-W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+W system.finalization_implementation%s  s-finimp.adb  s-finimp.ali
+W system.finalization_root%s  s-finroo.adb	s-finroo.ali
+W system.img_int%s	s-imgint.adb		s-imgint.ali
+W system.parameters%s	s-parame.adb		s-parame.ali
+W system.soft_links%s	s-soflin.adb		s-soflin.ali
 
-U graphs%s		graphs.ads		19b7a879 EE PK
+U graphs%s		graphs.ads		40befe90 EE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.exceptions%s	a-except.adb		a-except.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
@@ -20,83 +27,136 @@ W system.exception_table%s  s-exctab.adb	s-exctab.ali
 W system.standard_library%s  s-stalib.adb	s-stalib.ali
 
 D ada.ads		20070406091342 9c7dd3ea
-D a-except.ads		20070606104609 ba3e26e2
-D a-finali.ads		20070606101851 9eaacebd
-D a-filico.ads		20051115140645 9299732a
+D a-charac.ads		20070912115821 506ce725
+D a-chlat1.ads		20070912115821 e9ee6d0a
+D a-except.ads		20090409232307 b54b55de
+D a-finali.ads		20090409232307 9eaacebd
+D a-filico.ads		20090409232307 9299732a
+D a-inteio.ads		20070406091342 03bc737c
 D a-ioexce.ads		20070406091342 be0900a0
-D a-stream.ads		20061031174905 34aca5be
-D a-tags.ads		20071213102130 e10285b3
-D a-textio.ads		20071213102052 bc6e78fe
+D a-stream.ads		20090409232307 34aca5be
+D a-string.ads		20070406091342 87b4230b
+D a-strmap.ads		20090409232307 5253a637
+D a-strunb.ads		20090409232307 f0549c04
+D a-tags.ads		20090409232307 bfa07446
+D a-textio.ads		20090409232307 fe8af46e
+D a-tiinio.ads		20090409232307 949a7272
 D a-unccon.ads		20070406091342 51e09df2
 D a-uncdea.ads		20070406091342 dc667e6d
-D generic_linked_list.ads  20100515202745 3432f07b
-D generic_linked_list.adb  20100515202745 d305cccb
-D graphs.ads		20100515210151 4d8d5e91
-D graphs.adb		20100515211250 a6302581
-D interfac.ads		20051209172227 a69cad5c
-D i-cstrea.ads		20070406092312 e1e064a9
-D system.ads		20090825132209 28071540
-D s-crtl.ads		20070406092312 ef997abb
-D s-exctab.ads		20070912115821 5c1c61ae
-D s-ficobl.ads		20070814084926 8bb681e5
-D s-finimp.ads		20070606101344 9449f4cb
-D s-finroo.ads		20070814084926 1408f9d1
-D s-parame.ads		20070814084525 f32e56e9
-D s-secsta.ads		20070912115821 7bae3621
-D s-soflin.ads		20071213103411 2b67bae6
-D s-stache.ads		20070912115821 257b3be8
-D s-stalib.ads		20070912115821 9ac44ca2
-D s-stoele.ads		20070912115821 1104c881
-D s-stoele.adb		20071213103502 e9998c78
-D s-stratt.ads		20070406092920 b4bf338e
-D s-traent.ads		20070912115821 bd5f2753
-D s-unstyp.ads		20070912115821 c0f9fae5
-D s-wchcon.ads		20071213102052 ab028799
+D generic_linked_list.ads  20100516021909 3432f07b
+D generic_linked_list.adb  20100516021909 d305cccb
+D graphs.ads		20100516034437 566084e8
+D graphs.adb		20100516034632 9f308320
+D interfac.ads		20090409232307 a69cad5c
+D i-cstrea.ads		20090409232307 e1e064a9
+D system.ads		20091005122523 15e10948
+D s-crtl.ads		20090409232307 997234a1
+D s-exctab.ads		20090409232307 5c1c61ae
+D s-ficobl.ads		20090409232307 8bb681e5
+D s-finimp.ads		20090409232307 9449f4cb
+D s-finroo.ads		20090409232307 1408f9d1
+D s-imgint.ads		20090409232307 f77d133c
+D s-parame.ads		20090409232307 f32e56e9
+D s-secsta.ads		20090409232307 7bae3621
+D s-soflin.ads		20090409232307 0c6fd39d
+D s-stache.ads		20090409232307 257b3be8
+D s-stalib.ads		20090409232307 52b793d5
+D s-stoele.ads		20090409232307 ed966df3
+D s-stoele.adb		20090409232307 e9998c78
+D s-stratt.ads		20090409232307 fef7c1da
+D s-traent.ads		20090409232307 bd5f2753
+D s-unstyp.ads		20090409232307 c0f9fae5
+D s-wchcon.ads		20090409232307 ab028799
 X 1 ada.ads
-16K9*Ada 19e8 13|1r6 1r23 2r6 14|1r6 1r23 2r6 7r47 8r45
-X 8 a-textio.ads
-50K13*Text_IO 482e16 13|1w10 1r27 14|1w10 1r27
-53P9*File_Type(345R9) 13|15r41 14|27r44
-119V13*Standard_Input{53P9} 14|36r28
-X 10 a-uncdea.ads
-20u15*Unchecked_Deallocation 13|2w10 14|2w10 7r51 8r49
-X 11 generic_linked_list.ads
-7k9*Generic_Linked_List 47e24 13|3w6 27r30
+16K9*Ada 19e8 20|1r6 1r23 2r6 21|1r6 1r23 2r6 2r31 3r6 3r33 4r6 9r47 10r45
+X 7 a-inteio.ads
+18K13*Integer_Text_IO[15|45] 21|2w10 2r35
+X 10 a-string.ads
+16K13*Strings 35e16 21|3r10 3r37
+X 12 a-strunb.ads
+39K21*Unbounded 428e26 21|3w18 3r45
+42R9*Unbounded_String 395e14 21|127r15
+63V13*To_String{string} 21|137r16
+74U14*Append 21|130r13 131r13 132r13 135r9 136r9
+X 14 a-textio.ads
+48K13*Text_IO 506e16 20|1w10 1r27 21|1w10 1r27
+51P9*File_Type(369R9) 20|14r55 15r44 21|29r44 60r34 72r55
+101U14*Reset 21|81r9
+118V13*Standard_Output{51P9} 21|57r28
+165U14*New_Line 21|38r9 50r13
+171V13*End_Of_Line{boolean} 21|65r19
+241U14*Put 21|34r9 45r21
+259U14*Put_Line 21|33r9
+263U14*Put_Line 21|93r9
+X 15 a-tiinio.ads
+50U14*Get 21|66r13[7|18] 84r17[7|18]
+59U14*Put 21|36r13[7|18] 41r13[7|18] 47r21[7|18]
+X 17 a-uncdea.ads
+20u15*Unchecked_Deallocation 20|2w10 21|4w10 9r51 10r49
+X 18 generic_linked_list.ads
+7k9*Generic_Linked_List 47e24 20|3w6 27r30
 9R10*list
-10P10*listPtr(9R10[13|27]) 13|32r30[27] 33r30[27]
-38U15*clear 14|13r19[13|27]
-X 13 graphs.ads
-5K9*Graphs 51l5 51e11 14|3b14 66l5 66t11
+10P10*listPtr(9R10[20|27]) 20|28r24[27] 33r30[27] 34r30[27] 21|116r25[20|27]
+. 126r26[20|27]
+15V14*new_list{10P10[20|27]} 21|118r26[20|27]
+18V14*value{integer} 21|131r49[20|27] 136r44[20|27]
+21V14*next{10P10[20|27]} 21|129r25[20|27] 133r31[20|27]
+27V14*insert_after{10P10[20|27]} 21|107r35[20|27]
+38U15*clear 21|15r19[20|27]
+X 20 graphs.ads
+5K9*Graphs 53l5 53e11 21|5b14 145l5 145t11
 8I13*GraphWeight{integer} 24r75
-9I13*GraphNode{natural} 27r50 46r58 14|44r58
-10P10*WeightedGraph(37R10) 14r66 15r63 16r47 19r35 43c10 14|7r94 16r35 27r66
-. 33r47 60r66
-11R10*GraphPath 30c10 34e19 46r37 47r33 48r34 14|10r34 44r37 50r33
-14V14*ReadWeightedGraphFromFile{10P10} 14>40 14|60b14 64l9 64t34
-14s40 filename{string} 14|60b40
-15U15*WriteWeightedGraph 15>34 15>52 14|27b15 31l9 31t27 36r9
-15p34 file{8|53P9} 14|27b34
-15p52 graph{10P10} 14|27b55
-16U15*DisplayWeightedGraph 16>36 14|33b15 37l9 37t29
-16p36 graph{10P10} 14|33b36 36r44
-19U15*Free 19=20 14|16b15 21l9 21t13
-19p20 graph{10P10} 14|16b20 19r32 20m34
-24A10 WeightArray_Type(8I13)<integer><integer> 25r32 14|8r72
-25P10 WeightArray(24A10) 39r23 14|8r90
-27K13 Path_List[11|7] 32r20 33r20 14|13r9
-32p13*head{11|10P10[27]} 14|13m30
-33p13*last{11|10P10[27]}
-37R10 WeightedGraph_Type 41e19 43r34 14|7r74 63r20
-39p13*Weights{25P10} 14|19m38
-40i13*Size{natural}
-46U15 AddNode 46=23 46>48 14|44b15 48l9 48t16
-46r23 path{11R10} 14|44b23
-46i48 node{9I13} 14|44b48
-47V14 ToString{string} 47>23 14|50b14 54l9 54t17
-47r23 path{11R10} 14|50b23
-48U15 Free 48=20 14|10b15 14l9 14t13
-48r20 path{11R10} 14|10b20 13m25
-X 14 graphs.adb
-7U15 Deallocate_WeightedGraph[10|20] 20r9
-8U15 Deallocate_WeightArray[10|20] 19r9
+9I13*GraphNode{natural} 27r50 47r49 48r34 21|103r49 113r34
+10P10*WeightedGraph(38R10) 14r78 15r66 16r47 19r35 44c10 21|9r94 18r35 29r66
+. 54r47 72r78
+11R10*GraphPath 31c10 35e19 47r28 47r67 48r52 49r33 50r34 21|12r34 103r28
+. 103r67 105r19 113r52 115r19 124r33
+14U15*ReadWeightedGraphFromFile 14=41 14<66 21|72b15 95l9 95t34
+14p41 file{14|51P9} 21|72b41 74r37 81m15 84r21
+14p66 graph{10P10} 21|72b66 77m9 78r9 79r9 88r17 89r17
+15U15*WriteWeightedGraph 15>34 15>55 21|29b15 52l9 52t27 57r9
+15p34 file{14|51P9} 21|29b34 33r18 34r13 36r17 38r18 41r17 45r25 47r25 50r22
+15p55 graph{10P10} 21|29b55 35r21 40r21 42r25 43r24
+16U15*DisplayWeightedGraph 16>36 21|54b15 58l9 58t29
+16p36 graph{10P10} 21|54b36 57r45
+19U15*Free 19=20 21|18b15 23l9 23t13
+19p20 graph{10P10} 21|18b20 21r32 22m34
+24A10 WeightArray_Type(8I13)<integer><integer> 25r32 21|10r72 79r30
+25P10 WeightArray(24A10) 40r23 21|10r90
+27K13 Path_List[18|7] 28r14 33r20 34r20 21|15r9 107r25 116r15 118r16 126r16
+. 129r15 131r39 133r21 136r34
+33p13*head{18|10P10[27]} 21|15m30 119m17 126r42
+34p13*last{18|10P10[27]} 21|107m17 107r56 120m17
+38R10 WeightedGraph_Type 42e19 44r34 21|9r74 77r22
+40p13*Weights{25P10} 21|21m38 43m30 79m15 88m23 89m23
+41i13*Size{natural} 21|35r27 40r27 42r31 78m15
+47V14 "+"{11R10} 47>18 47>39 21|103b14 110l9 110t12
+47r18 path{11R10} 21|103b18 105r32
+47i39 node{9I13} 21|103b39 107r62
+48V14 NewGraphPath{11R10} 48>27 21|113b14 122l9 122t21
+48i27 node{9I13} 21|113b27 118r35
+49V14 ToString{string} 49>23 21|124b14 138l9 138t17
+49r23 path{11R10} 21|124b23 126r37
+50U15 Free 50=20 21|12b15 16l9 16t13
+50r20 path{11R10} 21|12b20 15m25
+X 21 graphs.adb
+9U15 Deallocate_WeightedGraph[17|20] 22r9
+10U15 Deallocate_WeightArray[17|20] 21r9
+31i9 val{integer} 43m17 44r20 47r31
+35i13 i{integer} 36r23
+40i13 i{integer} 41r23 43r38
+42i17 j{integer} 43r40
+60V14 GraphSize{natural} 60b14 60>24 70l9 70t18 74r27
+60p24 file{14|51P9} 65r31 66r17
+62i9 tmp{natural} 66m23
+63i9 len{natural} 67m13 67r20 69r16
+74i9 size{natural} 78r23 79r50 79r59 82r21 83r29
+75i9 val{integer} 84m27 85r20 86m21 88r39 89r39
+82i13 i{integer} 83r25 85r32 88r31 89r33
+83i17 j{integer} 85r37 88r33 89r31
+105r9 newPath{20|11R10} 107m9 107r48 108r16
+115r9 newPath{20|11R10} 119m9 120m9 121r16
+116p9 ptr{18|10P10[20|27]} 118m9 119r25 120r25
+126p9 iter{18|10P10[20|27]} 129r30 131r55 133m13 133r36 136r50
+127r9 str{12|42R9} 130m20 131m20 132m20 135m16 136m16 137r26
 

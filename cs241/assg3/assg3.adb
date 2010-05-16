@@ -11,9 +11,25 @@ procedure Assg3
 is
     graph : WeightedGraph;
     result : DijkstraResult;
+    inFile, outFile : File_Type;
 begin
-    graph := ReadWeightedGraphFromFile(GetInputFile("Input file containing weighted graph: "));
+    GetInputFile("Input file containing weighted graph: ", inFile);
+    GetOutputFile("Output file to write result of Dijkstra's algorithm to: ", outFile);
+
+    ReadWeightedGraphFromFile(inFile, graph);
+
+
     result := RunDijkstras(graph);
+
+    DisplayWeightedGraph(graph);
+    WriteWeightedGraph(outFile, graph);
+
+    WriteDijkstraResult(outFile, result);
     DisplayDijkstraResult(result);
-    WriteDijkstraResult(GetOutputFile("Output file to write result of Dijkstra's algorithm to: "), result);
+
+    -- cleanup
+    Close(inFile);
+    Close(outFile);
+    Free(result);
+    Free(graph);
 end Assg3;

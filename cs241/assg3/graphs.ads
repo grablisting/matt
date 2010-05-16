@@ -11,7 +11,7 @@ package Graphs is
     type GraphPath is private;
 
     -- i/o methods
-    function ReadWeightedGraphFromFile(file : File_Type) return WeightedGraph;
+    procedure ReadWeightedGraphFromFile(file : in out File_Type; graph : out WeightedGraph);
     procedure WriteWeightedGraph(file : in File_Type; graph : in WeightedGraph);
     procedure DisplayWeightedGraph(graph : in WeightedGraph);
     
@@ -25,6 +25,7 @@ private
     type WeightArray is access WeightArray_Type;
 
     package Path_List is new Generic_Linked_List(GraphNode);
+    use type Path_List.listPtr;
 
     -- simple linked list that holds it's head and last pointer
     type GraphPath is
@@ -43,7 +44,8 @@ private
     type WeightedGraph is access WeightedGraph_Type;
 
     -- path methods
-    procedure AddNode(path : in out GraphPath; node : in GraphNode);
+    function "+"(path : in GraphPath; node : in GraphNode) return GraphPath;
+    function NewGraphPath(node : GraphNode) return GraphPath;
     function ToString(path : in GraphPath) return String;
     procedure Free(path : in out GraphPath);
 

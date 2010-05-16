@@ -8,8 +8,10 @@ package Graphs.Dijkstra is
     procedure Free(result : in out DijkstraResult);
 
 private
+    type VisitedArray_Type is Array(Natural range <>) of Boolean;
+    type VisitedArray is access VisitedArray_Type;
     
-    type LengthTable_Type is Array(Natural range <>, Natural range <>) of Natural;
+    type LengthTable_Type is Array(Natural range <>, Natural range <>) of GraphWeight;
     type LengthTable is access LengthTable_Type;
 
     type PathTable_Type is Array(Natural range <>) of GraphPath;
@@ -20,6 +22,7 @@ private
 	    lengths : LengthTable;
 	    paths : PathTable;
 	end record;
-	    
+
+    function PickNextNode(iteration : Natural; lengths : LengthTable; visited : VisitedArray) return GraphNode;
 
 end Graphs.Dijkstra;

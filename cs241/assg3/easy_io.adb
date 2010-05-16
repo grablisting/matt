@@ -23,9 +23,8 @@ package body Easy_IO is
     end ToString;
 	
     
-    function GetInputFile(msg : String) return File_Type
+    procedure GetInputFile(msg : in String; file : out File_Type)
     is
-	file : File_Type;
 	name : FileName;
     begin
 	loop
@@ -40,24 +39,19 @@ package body Easy_IO is
 		    put_line("Could not open file: " & ToString(name));
 	    end;
 	end loop;
-	return file;
     end GetInputFile;
 
-    function GetOutputFile(msg : String) return File_Type
+    procedure GetOutputFile(msg : in String; file : out File_Type)
     is
-	file : File_Type;
 	name : FileName;
     begin
-	loop
-	    begin
-		put(msg);
-		name := GetFileName;
-		Open(file, Out_File, ToString(name));
-		exit;
-	    exception
-		when others =>
-		    Create(file, Out_File, ToString(name));
-	    end;
-	end loop;
+	begin
+	    put(msg);
+	    name := GetFileName;
+	    Open(file, Out_File, ToString(name));
+	exception
+	    when others =>
+		Create(file, Out_File, ToString(name));
+	end;
     end GetOutputFile;
 end Easy_IO;
