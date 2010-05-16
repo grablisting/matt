@@ -67,8 +67,36 @@ int substr(char *text, char *sub)
 
 int substr1(char *text, char *sub)
 {
-    char *c, *d;
-    
+    char *head = text;
+    char *search1, *search2;
+    char a,b;
+    int subLen=0;
+
+    search1=sub;
+    while(*search1)
+    {
+	search1++;
+	subLen++;
+    }
+
+    while(*(head+subLen-1))
+    {
+	search1 = head;
+	search2 = sub;
+	while(1)
+	{
+	    a = *search1;
+	    b = *search2;
+	    if(!b)
+		return 1;
+	    if(a != b)
+		break;
+	    search1++;
+	    search2++;
+	}
+	head++;
+    }
+   return 0; 
 
 }
 
@@ -78,6 +106,8 @@ int main(int argc, const char *argv[])
 	char *sub = (char *)malloc(sizeof(char)*TEXT_SIZE);
 	int textLen, subLen, isSubstr;
 	size_t maxSize = TEXT_SIZE;
+	clock_t before, after;
+	double hash=0, brute=0;
 
 
 	printf("main text: ");
@@ -88,8 +118,21 @@ int main(int argc, const char *argv[])
 	subLen = getline(&sub, &maxSize, stdin);
 	sub[subLen-1] = 0;
 
+	before = clock();
 	isSubstr = substr(text, sub);
-	printf("Found? %s\n", isSubstr ? "true" : "false");
+	after = clock();
+	brute = after - before;
+
+	before = clock();
+	isSubstr = substr1(text, sub);
+	after = clock();
+	hash = after - before;
+
+	printf("hash: %lf\nbrute: %lf\n", hash, brute);
+
+	printf("%s is faster\n", (hash < brute) ? "hash" : (hash == brute) ? "neither" : "brute force");
+
+	printf("found? %s\n", isSubstr ? "true" : "false");
 
 	return 0;
 }

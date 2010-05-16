@@ -1,6 +1,9 @@
-;
-; file: skel.asm
-; This file is a skeleton that can be used to start assembly programs.
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+; Matt Forbes
+; CSCI347
+; 5/12/2010
+; Encrypt Program
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 %include "asm_io.inc"
 LF	equ	0Ah
