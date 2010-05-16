@@ -1,0 +1,102 @@
+V "GNAT Lib v4.3"
+P SS ZX
+R nnnvnnnnnnnnnnnnnnnnnnvvnnnnvnnnnnnnnnnvnnnnnnnnnvnnnnnnvnnnnnnnnnnnnnnnn
+
+U graphs%b		graphs.adb		8bb57d83 NE PK
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.unchecked_deallocation%s
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
+
+U graphs%s		graphs.ads		19b7a879 EE PK
+W ada%s			ada.ads			ada.ali
+W ada.exceptions%s	a-except.adb		a-except.ali
+W ada.tags%s		a-tags.adb		a-tags.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W ada.unchecked_deallocation%s
+W generic_linked_list%s	generic_linked_list.adb	generic_linked_list.ali  AD
+W system%s		system.ads		system.ali
+W system.exception_table%s  s-exctab.adb	s-exctab.ali
+W system.standard_library%s  s-stalib.adb	s-stalib.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-except.ads		20070606104609 ba3e26e2
+D a-finali.ads		20070606101851 9eaacebd
+D a-filico.ads		20051115140645 9299732a
+D a-ioexce.ads		20070406091342 be0900a0
+D a-stream.ads		20061031174905 34aca5be
+D a-tags.ads		20071213102130 e10285b3
+D a-textio.ads		20071213102052 bc6e78fe
+D a-unccon.ads		20070406091342 51e09df2
+D a-uncdea.ads		20070406091342 dc667e6d
+D generic_linked_list.ads  20100515202745 3432f07b
+D generic_linked_list.adb  20100515202745 d305cccb
+D graphs.ads		20100515210151 4d8d5e91
+D graphs.adb		20100515211250 a6302581
+D interfac.ads		20051209172227 a69cad5c
+D i-cstrea.ads		20070406092312 e1e064a9
+D system.ads		20090825132209 28071540
+D s-crtl.ads		20070406092312 ef997abb
+D s-exctab.ads		20070912115821 5c1c61ae
+D s-ficobl.ads		20070814084926 8bb681e5
+D s-finimp.ads		20070606101344 9449f4cb
+D s-finroo.ads		20070814084926 1408f9d1
+D s-parame.ads		20070814084525 f32e56e9
+D s-secsta.ads		20070912115821 7bae3621
+D s-soflin.ads		20071213103411 2b67bae6
+D s-stache.ads		20070912115821 257b3be8
+D s-stalib.ads		20070912115821 9ac44ca2
+D s-stoele.ads		20070912115821 1104c881
+D s-stoele.adb		20071213103502 e9998c78
+D s-stratt.ads		20070406092920 b4bf338e
+D s-traent.ads		20070912115821 bd5f2753
+D s-unstyp.ads		20070912115821 c0f9fae5
+D s-wchcon.ads		20071213102052 ab028799
+X 1 ada.ads
+16K9*Ada 19e8 13|1r6 1r23 2r6 14|1r6 1r23 2r6 7r47 8r45
+X 8 a-textio.ads
+50K13*Text_IO 482e16 13|1w10 1r27 14|1w10 1r27
+53P9*File_Type(345R9) 13|15r41 14|27r44
+119V13*Standard_Input{53P9} 14|36r28
+X 10 a-uncdea.ads
+20u15*Unchecked_Deallocation 13|2w10 14|2w10 7r51 8r49
+X 11 generic_linked_list.ads
+7k9*Generic_Linked_List 47e24 13|3w6 27r30
+9R10*list
+10P10*listPtr(9R10[13|27]) 13|32r30[27] 33r30[27]
+38U15*clear 14|13r19[13|27]
+X 13 graphs.ads
+5K9*Graphs 51l5 51e11 14|3b14 66l5 66t11
+8I13*GraphWeight{integer} 24r75
+9I13*GraphNode{natural} 27r50 46r58 14|44r58
+10P10*WeightedGraph(37R10) 14r66 15r63 16r47 19r35 43c10 14|7r94 16r35 27r66
+. 33r47 60r66
+11R10*GraphPath 30c10 34e19 46r37 47r33 48r34 14|10r34 44r37 50r33
+14V14*ReadWeightedGraphFromFile{10P10} 14>40 14|60b14 64l9 64t34
+14s40 filename{string} 14|60b40
+15U15*WriteWeightedGraph 15>34 15>52 14|27b15 31l9 31t27 36r9
+15p34 file{8|53P9} 14|27b34
+15p52 graph{10P10} 14|27b55
+16U15*DisplayWeightedGraph 16>36 14|33b15 37l9 37t29
+16p36 graph{10P10} 14|33b36 36r44
+19U15*Free 19=20 14|16b15 21l9 21t13
+19p20 graph{10P10} 14|16b20 19r32 20m34
+24A10 WeightArray_Type(8I13)<integer><integer> 25r32 14|8r72
+25P10 WeightArray(24A10) 39r23 14|8r90
+27K13 Path_List[11|7] 32r20 33r20 14|13r9
+32p13*head{11|10P10[27]} 14|13m30
+33p13*last{11|10P10[27]}
+37R10 WeightedGraph_Type 41e19 43r34 14|7r74 63r20
+39p13*Weights{25P10} 14|19m38
+40i13*Size{natural}
+46U15 AddNode 46=23 46>48 14|44b15 48l9 48t16
+46r23 path{11R10} 14|44b23
+46i48 node{9I13} 14|44b48
+47V14 ToString{string} 47>23 14|50b14 54l9 54t17
+47r23 path{11R10} 14|50b23
+48U15 Free 48=20 14|10b15 14l9 14t13
+48r20 path{11R10} 14|10b20 13m25
+X 14 graphs.adb
+7U15 Deallocate_WeightedGraph[10|20] 20r9
+8U15 Deallocate_WeightArray[10|20] 19r9
+

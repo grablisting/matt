@@ -1,0 +1,70 @@
+V "GNAT Lib v4.3"
+M P W=b
+P SS ZX
+R nnnnnnnnnnnnnnnnnnnnnnvnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnn
+
+U assg3%b		assg3.adb		a8b80b17 NE SU
+W ada%s			ada.ads			ada.ali
+W ada.text_io%s		a-textio.adb		a-textio.ali
+W easy_io%s		easy_io.adb		easy_io.ali
+W graphs%s		graphs.adb		graphs.ali
+W graphs.dijkstra%s	graphs-dijkstra.adb	graphs-dijkstra.ali
+
+D ada.ads		20070406091342 9c7dd3ea
+D a-except.ads		20070606104609 ba3e26e2
+D a-finali.ads		20070606101851 9eaacebd
+D a-filico.ads		20051115140645 9299732a
+D a-ioexce.ads		20070406091342 be0900a0
+D a-stream.ads		20061031174905 34aca5be
+D a-tags.ads		20071213102130 e10285b3
+D a-textio.ads		20071213102052 bc6e78fe
+D a-unccon.ads		20070406091342 51e09df2
+D a-uncdea.ads		20070406091342 dc667e6d
+D assg3.adb		20100515213233 0b029ea5
+D easy_io.ads		20100515213219 70f60913
+D generic_linked_list.ads  20100515202745 3432f07b
+D graphs.ads		20100515213302 1c23ec52
+D graphs-dijkstra.ads	20100515211102 7301080d
+D interfac.ads		20051209172227 a69cad5c
+D i-cstrea.ads		20070406092312 e1e064a9
+D system.ads		20090825132209 28071540
+D s-crtl.ads		20070406092312 ef997abb
+D s-exctab.ads		20070912115821 5c1c61ae
+D s-ficobl.ads		20070814084926 8bb681e5
+D s-finimp.ads		20070606101344 9449f4cb
+D s-finroo.ads		20070814084926 1408f9d1
+D s-parame.ads		20070814084525 f32e56e9
+D s-secsta.ads		20070912115821 7bae3621
+D s-soflin.ads		20071213103411 2b67bae6
+D s-stache.ads		20070912115821 257b3be8
+D s-stalib.ads		20070912115821 9ac44ca2
+D s-stoele.ads		20070912115821 1104c881
+D s-stoele.adb		20071213103502 e9998c78
+D s-stratt.ads		20070406092920 b4bf338e
+D s-traent.ads		20070912115821 bd5f2753
+D s-unstyp.ads		20070912115821 c0f9fae5
+D s-wchcon.ads		20071213102052 ab028799
+X 1 ada.ads
+16K9*Ada 19e8 11|5r6 5r23
+X 8 a-textio.ads
+50K13*Text_IO 482e16 11|5w10 5r27
+53P9*File_Type(345R9)
+X 11 assg3.adb
+10U11*Assg3 10b11 19l5 19t10
+12p5 graph{14|10P10} 15m5 16r28
+13r5 result{15|3R10} 16m5 17r27 18r100
+X 12 easy_io.ads
+3K9*Easy_IO 11|6w6 6r19 12|8e12
+5V14*GetInputFile{8|53P9} 11|15r40
+6V14*GetOutputFile{8|53P9} 11|18r25
+X 14 graphs.ads
+5K9*Graphs 11|7w6 7r18 8r6 8r27 14|51e11
+10P10*WeightedGraph(37R10) 11|12r13
+14V14*ReadWeightedGraphFromFile{10P10} 11|15r14
+X 15 graphs-dijkstra.ads
+1K16*Dijkstra 11|8w13 8r34 15|25e20
+3R10*DijkstraResult 11|13r14 15|22e19
+5V14*RunDijkstras{3R10} 11|16r15
+6U15*WriteDijkstraResult 11|18r5
+7U15*DisplayDijkstraResult 11|17r5
+

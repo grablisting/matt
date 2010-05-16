@@ -11,7 +11,7 @@
 
 (define div_h
   (lambda (x y z)
-    (cond ( (or (< x y) (eq? '0 x)) (cons z (cons x '())) )
+    (cond ( (or (< x y) (zero? x)) (cons z (cons x '())) )
           ( else (div_h (- x y) y (+ z 1) ) ))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

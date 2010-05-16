@@ -133,6 +133,8 @@ int main(int argc, const char *argv[])
 	printf("%s is faster\n", (hash < brute) ? "hash" : (hash == brute) ? "neither" : "brute force");
 
 	printf("found? %s\n", isSubstr ? "true" : "false");
+	isSubstr = substr(text, sub);
+	printf("Found? %s\n", isSubstr ? "true" : "false");
 
 	return 0;
 }
