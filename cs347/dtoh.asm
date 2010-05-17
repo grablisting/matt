@@ -5,7 +5,7 @@
 ; Convert Decimal to Hexadecimal
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-%include "libs/asm_io.inc"
+%include "asm_io.inc"
 
 BASE     equ     16
 LF       equ     0AH
