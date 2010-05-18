@@ -14,6 +14,6 @@ LIBS = $(LIBDIR)/driver.c $(LIBDIR)/asm_io.o $(LIBDIR)/cdecl.h
 all:
 	make mstrebl
 
-mstrebl: mstrebl.o strebl.o
-	$(CC) $(CCFLAGS) $? $(LIBS) -o $@
+mstrebl: strebl.o mstrebl.o
+	$(CC) $(CCFLAGS) strebl.o mstrebl.o $(LIBS) -o $@
 

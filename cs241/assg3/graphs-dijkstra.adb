@@ -56,6 +56,7 @@ package body Graphs.Dijkstra is
 		nextWeight := graph.Weights(j, nextNode);
 		oldWeight := result.Lengths(j, i-1);
 		if( (j /= nextNode) and 
+		    (not visited(j)) and
 		    (nextWeight > 0) and 
 		    ( (oldWeight = -1) or ( (weight + nextWeight) < oldWeight)) ) 
 		then
