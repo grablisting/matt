@@ -1,8 +1,8 @@
 V "GNAT Lib v4.4"
 P SS ZX
-R nnnvnnnvnnnnnnnnnnnnnnvvnnnnvnnvnnnnnnnnnvnnnnnnnnnnvnnvnnnnvnnnnnnnnnnnnnnnn
+R nnnvnnnvnnnnnnnnnnnnnnvvnnnnvnnvnnnnnnvnnvnnnnnnnnnnvnnvnnnnvnnnnnnnnnnnnnnnn
 
-U graphs%b		graphs.adb		185462b3 NE OO PK
+U graphs%b		graphs.adb		002d1f2f NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.strings%s		a-string.ads		a-string.ali
@@ -13,6 +13,7 @@ W system.finalization_implementation%s  s-finimp.adb  s-finimp.ali
 W system.finalization_root%s  s-finroo.adb	s-finroo.ali
 W system.img_int%s	s-imgint.adb		s-imgint.ali
 W system.parameters%s	s-parame.adb		s-parame.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 W system.soft_links%s	s-soflin.adb		s-soflin.ali
 
 U graphs%s		graphs.ads		40befe90 EE OO PK
@@ -44,9 +45,9 @@ D a-tiinio.ads		20090409232307 949a7272
 D a-unccon.ads		20070406091342 51e09df2
 D a-uncdea.ads		20070406091342 dc667e6d
 D generic_linked_list.ads  20100516021909 3432f07b
-D generic_linked_list.adb  20100516021909 d305cccb
+D generic_linked_list.adb  20100517033643 6eaea7c9
 D graphs.ads		20100516034437 566084e8
-D graphs.adb		20100516034632 9f308320
+D graphs.adb		20100517054644 8749febc
 D interfac.ads		20090409232307 a69cad5c
 D i-cstrea.ads		20090409232307 e1e064a9
 D system.ads		20091005122523 15e10948
@@ -75,88 +76,91 @@ X 10 a-string.ads
 16K13*Strings 35e16 21|3r10 3r37
 X 12 a-strunb.ads
 39K21*Unbounded 428e26 21|3w18 3r45
-42R9*Unbounded_String 395e14 21|127r15
-63V13*To_String{string} 21|137r16
-74U14*Append 21|130r13 131r13 132r13 135r9 136r9
+42R9*Unbounded_String 395e14 21|142r15
+63V13*To_String{string} 21|156r16
+74U14*Append 21|148r13 149r13 150r13 153r9 154r9
 X 14 a-textio.ads
 48K13*Text_IO 506e16 20|1w10 1r27 21|1w10 1r27
-51P9*File_Type(369R9) 20|14r55 15r44 21|29r44 60r34 72r55
-101U14*Reset 21|81r9
-118V13*Standard_Output{51P9} 21|57r28
-165U14*New_Line 21|38r9 50r13
-171V13*End_Of_Line{boolean} 21|65r19
-241U14*Put 21|34r9 45r21
+51P9*File_Type(369R9) 20|14r55 15r44 21|29r44 67r34 79r55
+101U14*Reset 21|88r9
+118V13*Standard_Output{51P9} 21|64r28
+165U14*New_Line 21|38r9 43r9 56r13 58r9
+171V13*End_Of_Line{boolean} 21|72r19
+241U14*Put 21|34r9 39r9 41r13 47r13 51r21
 259U14*Put_Line 21|33r9
-263U14*Put_Line 21|93r9
+263U14*Put_Line 21|100r9
 X 15 a-tiinio.ads
-50U14*Get 21|66r13[7|18] 84r17[7|18]
-59U14*Put 21|36r13[7|18] 41r13[7|18] 47r21[7|18]
+50U14*Get 21|73r13[7|18] 91r17[7|18]
+59U14*Put 21|36r13[7|18] 46r13[7|18] 53r21[7|18]
 X 17 a-uncdea.ads
 20u15*Unchecked_Deallocation 20|2w10 21|4w10 9r51 10r49
 X 18 generic_linked_list.ads
 7k9*Generic_Linked_List 47e24 20|3w6 27r30
 9R10*list
-10P10*listPtr(9R10[20|27]) 20|28r24[27] 33r30[27] 34r30[27] 21|116r25[20|27]
-. 126r26[20|27]
-15V14*new_list{10P10[20|27]} 21|118r26[20|27]
-18V14*value{integer} 21|131r49[20|27] 136r44[20|27]
-21V14*next{10P10[20|27]} 21|129r25[20|27] 133r31[20|27]
-27V14*insert_after{10P10[20|27]} 21|107r35[20|27]
+10P10*listPtr(9R10[20|27]) 20|28r24[27] 33r30[27] 34r30[27] 21|113r26[20|27]
+. 131r25[20|27] 141r26[20|27]
+15V14*new_list{10P10[20|27]} 21|115r35[20|27] 133r26[20|27]
+18V14*value{integer} 21|115r54[20|27] 119r76[20|27] 149r49[20|27] 154r44[20|27]
+21V14*next{10P10[20|27]} 21|117r27[20|27] 120r31[20|27] 147r25[20|27] 151r31[20|27]
+27V14*insert_after{10P10[20|27]} 21|119r39[20|27] 122r35[20|27]
 38U15*clear 21|15r19[20|27]
 X 20 graphs.ads
-5K9*Graphs 53l5 53e11 21|5b14 145l5 145t11
+5K9*Graphs 53l5 53e11 21|5b14 164l5 164t11
 8I13*GraphWeight{integer} 24r75
-9I13*GraphNode{natural} 27r50 47r49 48r34 21|103r49 113r34
+9I13*GraphNode{natural} 27r50 47r49 48r34 21|110r49 128r34
 10P10*WeightedGraph(38R10) 14r78 15r66 16r47 19r35 44c10 21|9r94 18r35 29r66
-. 54r47 72r78
-11R10*GraphPath 31c10 35e19 47r28 47r67 48r52 49r33 50r34 21|12r34 103r28
-. 103r67 105r19 113r52 115r19 124r33
-14U15*ReadWeightedGraphFromFile 14=41 14<66 21|72b15 95l9 95t34
-14p41 file{14|51P9} 21|72b41 74r37 81m15 84r21
-14p66 graph{10P10} 21|72b66 77m9 78r9 79r9 88r17 89r17
-15U15*WriteWeightedGraph 15>34 15>55 21|29b15 52l9 52t27 57r9
-15p34 file{14|51P9} 21|29b34 33r18 34r13 36r17 38r18 41r17 45r25 47r25 50r22
-15p55 graph{10P10} 21|29b55 35r21 40r21 42r25 43r24
-16U15*DisplayWeightedGraph 16>36 21|54b15 58l9 58t29
-16p36 graph{10P10} 21|54b36 57r45
+. 61r47 79r78
+11R10*GraphPath 31c10 35e19 47r28 47r67 48r52 49r33 50r34 21|12r34 110r28
+. 110r67 112r19 128r52 130r19 139r33
+14U15*ReadWeightedGraphFromFile 14=41 14<66 21|79b15 102l9 102t34
+14p41 file{14|51P9} 21|79b41 81r37 88m15 91r21
+14p66 graph{10P10} 21|79b66 84m9 85r9 86r9 95r17 96r17
+15U15*WriteWeightedGraph 15>34 15>55 21|29b15 59l9 59t27 64r9
+15p34 file{14|51P9} 21|29b34 33r18 34r13 36r17 38r18 39r13 41r17 43r18 46r17
+. 47r17 51r25 53r25 56r22 58r18
+15p55 graph{10P10} 21|29b55 35r21 40r21 45r21 48r25 49r24
+16U15*DisplayWeightedGraph 16>36 21|61b15 65l9 65t29
+16p36 graph{10P10} 21|61b36 64r45
 19U15*Free 19=20 21|18b15 23l9 23t13
 19p20 graph{10P10} 21|18b20 21r32 22m34
-24A10 WeightArray_Type(8I13)<integer><integer> 25r32 21|10r72 79r30
+24A10 WeightArray_Type(8I13)<integer><integer> 25r32 21|10r72 86r30
 25P10 WeightArray(24A10) 40r23 21|10r90
-27K13 Path_List[18|7] 28r14 33r20 34r20 21|15r9 107r25 116r15 118r16 126r16
-. 129r15 131r39 133r21 136r34
-33p13*head{18|10P10[27]} 21|15m30 119m17 126r42
-34p13*last{18|10P10[27]} 21|107m17 107r56 120m17
-38R10 WeightedGraph_Type 42e19 44r34 21|9r74 77r22
-40p13*Weights{25P10} 21|21m38 43m30 79m15 88m23 89m23
-41i13*Size{natural} 21|35r27 40r27 42r31 78m15
-47V14 "+"{11R10} 47>18 47>39 21|103b14 110l9 110t12
-47r18 path{11R10} 21|103b18 105r32
-47i39 node{9I13} 21|103b39 107r62
-48V14 NewGraphPath{11R10} 48>27 21|113b14 122l9 122t21
-48i27 node{9I13} 21|113b27 118r35
-49V14 ToString{string} 49>23 21|124b14 138l9 138t17
-49r23 path{11R10} 21|124b23 126r37
+27K13 Path_List[18|7] 28r14 33r20 34r20 21|15r9 113r16 115r25 115r44 117r17
+. 119r29 119r66 120r21 122r25 131r15 133r16 141r16 147r15 149r39 151r21 154r34
+33p13*head{18|10P10[27]} 21|15m30 113r42 115m17 116r33 134m17 141r42
+34p13*last{18|10P10[27]} 21|116m17 119m21 119r60 122m17 122r56 135m17
+38R10 WeightedGraph_Type 42e19 44r34 21|9r74 84r22
+40p13*Weights{25P10} 21|21m38 49m30 86m15 95m23 96m23
+41i13*Size{natural} 21|35r27 40r27 45r27 48r31 85m15
+47V14 "+"{11R10} 47>18 47>39 21|110b14 125l9 125t12
+47r18 path{11R10} 21|110b18 113r37
+47i39 node{9I13} 21|110b39 122r62
+48V14 NewGraphPath{11R10} 48>27 21|128b14 137l9 137t21
+48i27 node{9I13} 21|128b27 133r35
+49V14 ToString{string} 49>23 21|139b14 157l9 157t17
+49r23 path{11R10} 21|139b23 141r37
 50U15 Free 50=20 21|12b15 16l9 16t13
 50r20 path{11R10} 21|12b20 15m25
 X 21 graphs.adb
 9U15 Deallocate_WeightedGraph[17|20] 22r9
 10U15 Deallocate_WeightArray[17|20] 21r9
-31i9 val{integer} 43m17 44r20 47r31
+31i9 val{integer} 49m17 50r20 53r31
 35i13 i{integer} 36r23
-40i13 i{integer} 41r23 43r38
-42i17 j{integer} 43r40
-60V14 GraphSize{natural} 60b14 60>24 70l9 70t18 74r27
-60p24 file{14|51P9} 65r31 66r17
-62i9 tmp{natural} 66m23
-63i9 len{natural} 67m13 67r20 69r16
-74i9 size{natural} 78r23 79r50 79r59 82r21 83r29
-75i9 val{integer} 84m27 85r20 86m21 88r39 89r39
-82i13 i{integer} 83r25 85r32 88r31 89r33
-83i17 j{integer} 85r37 88r33 89r31
-105r9 newPath{20|11R10} 107m9 107r48 108r16
-115r9 newPath{20|11R10} 119m9 120m9 121r16
-116p9 ptr{18|10P10[20|27]} 118m9 119r25 120r25
-126p9 iter{18|10P10[20|27]} 129r30 131r55 133m13 133r36 136r50
-127r9 str{12|42R9} 130m20 131m20 132m20 135m16 136m16 137r26
+40i13 i{integer}
+45i13 i{integer} 46r23 49r38
+48i17 j{integer} 49r40
+67V14 GraphSize{natural} 67b14 67>24 77l9 77t18 81r27
+67p24 file{14|51P9} 72r31 73r17
+69i9 tmp{natural} 73m23
+70i9 len{natural} 74m13 74r20 76r16
+81i9 size{natural} 85r23 86r50 86r59 89r21 90r25
+82i9 val{integer} 91m27 92r20 93m21 95r39 96r39
+89i13 i{integer} 90r22 92r32 95r31 96r33
+90i17 j{integer} 92r37 95r33 96r31
+112r9 newPath{20|11R10} 115m9 116m9 116r25 119m13 119r52 122m9 122r48 123r16
+113p9 iter{18|10P10[20|27]} 115r60 117m9 117r32 118r15 119r82 120m13 120r36
+130r9 newPath{20|11R10} 134m9 135m9 136r16
+131p9 ptr{18|10P10[20|27]} 133m9 134r25 135r25
+141p9 iter{18|10P10[20|27]} 144r12 147r30 149r55 151m13 151r36 154r50
+142r9 str{12|42R9} 148m20 149m20 150m20 153m16 154m16 156r26
 

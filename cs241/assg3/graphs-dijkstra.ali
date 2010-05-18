@@ -1,8 +1,8 @@
 V "GNAT Lib v4.4"
 P SS ZX
-R nnnvnnnvnnnnnnnnnnnnnnvvnnvnvnnnnnnnnnnnnvnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnnnnn
+R nnnvnnnvnnnnnnnnnnnnnnvvnnvnvnnnnnnnnnvnnvnnnnnnnnnnvnnvnnnnnnnnnnnnnnnnnnnnn
 
-U graphs.dijkstra%b	graphs-dijkstra.adb	8452c167 NE OO PK
+U graphs.dijkstra%b	graphs-dijkstra.adb	e51618ad NE OO PK
 W ada%s			ada.ads			ada.ali
 W ada.integer_text_io%s	a-inteio.ads		a-inteio.ali
 W ada.tags%s		a-tags.adb		a-tags.ali
@@ -10,6 +10,7 @@ W ada.text_io%s		a-textio.adb		a-textio.ali
 W ada.unchecked_deallocation%s
 W graphs%s		graphs.adb		graphs.ali
 W interfaces%s		interfac.ads		interfac.ali
+W system.secondary_stack%s  s-secsta.adb	s-secsta.ali
 
 U graphs.dijkstra%s	graphs-dijkstra.ads	970cffe1 EE NE OO PK
 W graphs%s		graphs.adb		graphs.ali
@@ -29,7 +30,7 @@ D a-uncdea.ads		20070406091342 dc667e6d
 D generic_linked_list.ads  20100516021909 3432f07b
 D graphs.ads		20100516034437 566084e8
 D graphs-dijkstra.ads	20100516040329 c16c7b09
-D graphs-dijkstra.adb	20100516041909 646e4311
+D graphs-dijkstra.adb	20100517055224 052a9adb
 D interfac.ads		20090409232307 a69cad5c
 D i-cstrea.ads		20090409232307 e1e064a9
 D system.ads		20091005122523 15e10948
@@ -55,76 +56,82 @@ X 5 a-inteio.ads
 18K13*Integer_Text_IO[10|45] 16|2w10 2r35
 X 9 a-textio.ads
 48K13*Text_IO 506e16 16|1w10 1r27
-51P9*File_Type(369R9) 15|6r45 16|95r45
-118V13*Standard_Output{51P9} 16|120r29
-165U14*New_Line 16|103r9 113r9
-166U14*New_Line 16|53r13
-241U14*Put 16|108r17
-259U14*Put_Line 16|99r9
+51P9*File_Type(369R9) 15|6r45 16|97r45
+118V13*Standard_Output{51P9} 16|139r29
+165U14*New_Line 16|105r9 110r9 121r13 124r9 132r9
+241U14*Put 16|106r9 108r13 116r21 129r13
+259U14*Put_Line 16|101r9 126r9 130r13
 X 10 a-tiinio.ads
-59U14*Put 16|101r13[5|18] 110r17[5|18]
-65U14*Put 16|52r13[5|18]
+59U14*Put 16|103r13[5|18] 118r21[5|18] 128r13[5|18]
 X 12 a-uncdea.ads
 20u15*Unchecked_Deallocation 16|3w10 9r47 10r49 11r50
 X 14 graphs.ads
-5K9*Graphs 53e11 15|1r9 28r5 16|5r14 126r5
-8I13*GraphWeight{integer} 15|14r75 16|75r21 77r21
-9I13*GraphNode{natural} 15|26r102 16|30r20 73r102 76r20
+5K9*Graphs 53e11 15|1r9 28r5 16|5r14 145r5
+8I13*GraphWeight{integer} 15|14r75 16|77r21 79r21
+9I13*GraphNode{natural} 15|26r102 16|30r20 75r102 78r20
 10P10*WeightedGraph(38R10) 15|5r35 16|24r35
 11R10*GraphPath 35e19 15|17r55
 24A10 WeightArray_Type(8I13)<integer><integer>
 25P10 WeightArray(24A10)
-40p13*Weights{25P10} 16|37m29 57m41
-41i13*Size{natural} 16|32r57 32r72 33r53 36r27 45r51 48r27 55r31
-47V14 "+"{11R10} 16|61r67
-48V14 NewGraphPath{11R10} 16|41r36
-50U15 Free 16|60r25
+40p13*Weights{25P10} 16|39m29 56m37
+41i13*Size{natural} 16|32r57 32r72 33r53 38r27 47r51 50r27 55r31
+47V14 "+"{11R10} 16|43r52 64r63
+48V14 NewGraphPath{11R10} 16|35r28
+49V14 ToString{string} 16|130r28
+50U15 Free 16|63r21
 X 15 graphs-dijkstra.ads
-1K16*Dijkstra 14|5k9 15|28l12 28e20 16|5b21 126l12 126t20
+1K16*Dijkstra 14|5k9 15|28l12 28e20 16|5b21 145l12 145t20
 3R10*DijkstraResult 5r57 6r65 7r49 8r36 20c10 24e19 16|13r36 24r57 26r18
-. 95r65 117r49
-5V14*RunDijkstras{3R10} 5>27 16|24b14 71l9 71t21
-5p27 graph{14|10P10} 16|24b27 32r51 32r66 33r47 36r21 37r23 45r45 48r21 55r25
-. 57r35
-6U15*WriteDijkstraResult 6>35 6>56 16|95b15 115l9 115t28 120r9
-6p35 file{9|51P9} 16|95b35 99r18 101r17 103r18 108r21 110r21 113r18
-6r56 result{3R10} 16|95b56 100r18 105r18 106r20 106r27 106r38
-7U15*DisplayDijkstraResult 7>37 16|117b15 121l9 121t30
-7r37 result{3R10} 16|117b37 120r46
+. 97r65 136r49
+5V14*RunDijkstras{3R10} 5>27 16|24b14 73l9 73t21
+5p27 graph{14|10P10} 16|24b27 32r51 32r66 33r47 38r21 39r23 47r45 50r21 55r25
+. 56r31
+6U15*WriteDijkstraResult 6>35 6>56 16|97b15 134l9 134t28 139r9
+6p35 file{9|51P9} 16|97b35 101r18 103r17 105r18 106r13 108r17 110r18 116r25
+. 118r25 121r22 124r18 126r18 128r17 129r17 130r22 132r18
+6r56 result{3R10} 16|97b56 102r18 107r21 112r18 113r22 114r24 114r31 127r18
+. 130r37 130r44
+7U15*DisplayDijkstraResult 7>37 16|136b15 140l9 140t30
+7r37 result{3R10} 16|136b37 139r46
 8U15*Free 8=20 16|13b15 18l9 18t13
 8r20 result{3R10} 16|13b20 16m32 17m30
-11A10 VisitedArray_Type(boolean)<integer> 12r33 16|11r73 45r24
-12P10 VisitedArray(11A10) 26r81 16|11r92 27r19 73r81
+11A10 VisitedArray_Type(boolean)<integer> 12r33 16|11r73 47r24
+12P10 VisitedArray(11A10) 26r81 16|11r92 27r19 75r81
 14A10 LengthTable_Type(14|8I13)<integer><integer> 15r32 16|10r72 32r31
-15P10 LengthTable(14A10) 22r23 26r58 16|10r90 73r58
+15P10 LengthTable(14A10) 22r23 26r58 16|10r90 75r58
 17A10 PathTable_Type(14|11R10)<integer> 18r30 16|9r70 33r29
 18P10 PathTable(17A10) 23r21 16|9r86
-22p13*lengths{15P10} 16|16m39 32m16 38m20 49r50 51m30 58m74 59m32 63m32 63m56
-. 100r25 105r25 106m27 106r45
-23p13*paths{18P10} 16|17m37 33m16 41m24 60m37 61m32 61m51
-26V14 PickNextNode{14|9I13} 26>27 26>48 26>71 16|49r25 73b14 88l9 88t21
-26i27 iteration{natural} 16|73b27 81r37
-26p48 lengths{15P10} 16|73b48 80r18 81r26
-26p71 visited{12P10} 16|73b71 82r22
+22p13*lengths{15P10} 16|16m39 32m16 40m20 51r50 53m30 57m37 62m28 66m28 66m52
+. 102r25 107m28 112r25 113r29 114m31
+23p13*paths{18P10} 16|17m37 33m16 35m16 43m24 43m43 63m33 64m28 64m47 127r25
+. 130m44
+26V14 PickNextNode{14|9I13} 26>27 26>48 26>71 16|51r25 75b14 90l9 90t21
+26i27 iteration{natural} 16|75b27 83r37
+26p48 lengths{15P10} 16|75b48 82r18 83r26
+26p71 visited{12P10} 16|75b71 84r22
 X 16 graphs-dijkstra.adb
 9U15 Deallocate_PathTable[12|20] 17r9
 10U15 Deallocate_LengthTable[12|20] 16r9
-11U15 Deallocate_VisitedArray[12|20] 69r9
-26r9 result{15|3R10} 32m9 33m9 38r13 38r20 41r17 41r24 49r43 51r23 51r30
-. 58r67 58r74 59r25 59r32 60r30 60r37 61r25 61r32 61r44 61r51 63r25 63r32
-. 63r49 63r56 70r16
-27p9 visited{15|12P10} 45m9 46r9 49r59 50r13 69m33
-28i9 weight{integer} 37m13 38r36 40r16 51m13 58r44 59r50
-29i9 nextWeight{integer} 57m21 58r24 58r53 59r59
-30i9 nextNode{14|9I13} 49m13 50r21 51r38 52r17 56r26 57r49 61r57
-36i13 i{integer} 37r37 38r28 41r30 41r49
-48i13 i{integer} 49r38 51r48 58r85 59r43 63r43 63r67
-55i17 j{integer} 56r21 57r59 58r82 59r40 60r43 61r38 61r69 63r40 63r64
-75i9 minLength{14|8I13} 82r78 83m17
-76i9 minIndex{14|9I13} 84m17 87r16
-77i9 curLength{14|8I13} 81m13 82r45 82r65 83r30
-80i13 i{integer} 81r34 82r30 84r29
-97i9 val{integer} 106m13 107r16 110r27
-100i13 i{integer} 101r23
-105i13 i{integer} 106r35
+11U15 Deallocate_VisitedArray[12|20] 71r9
+26r9 result{15|3R10} 32m9 33m9 35r9 35r16 40r13 40r20 43r17 43r24 43r36 43r43
+. 51r43 53r23 53r30 57r30 57r37 62r21 62r28 63r26 63r33 64r21 64r28 64r40
+. 64r47 66r21 66r28 66r45 66r52 72r16
+27p9 visited{15|12P10} 47m9 48r9 51r59 52r13 71m33
+28i9 weight{integer} 39m13 40r36 42r16 53m13 60r46 62r46
+29i9 nextWeight{integer} 56m17 59r22 60r55 62r55
+29i21 oldWeight{integer} 57m17 60r24 60r69
+30i9 nextNode{14|9I13} 51m13 52r21 53r38 56r48 58r27 64r53
+38i13 i{integer} 39r37 40r28 42r33 43r30 43r54
+50i13 i{integer} 51r38 53r48 57r48 62r39 66r39 66r63
+55i17 j{integer} 56r45 57r45 58r22 62r36 63r39 64r34 64r65 66r36 66r60
+77i9 minLength{14|8I13} 84r77 85m17
+78i9 minIndex{14|9I13} 86m17 89r16
+79i9 curLength{14|8I13} 83m13 84r45 84r65 85r30
+82i13 i{integer} 83r34 84r30 86r29
+99i9 val{integer} 114m17 115r20 118r31
+102i13 i{integer} 103r23
+107i13 i{integer}
+112i13 i{integer} 114r42
+113i17 j{integer} 114r39
+127i13 i{integer} 128r23 130r50
 

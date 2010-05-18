@@ -36,9 +36,15 @@ package body Graphs is
 	    put(file, i, 6);
 	end loop;
 	new_line(file);
+	put(file, "      ");
+	for i in 1..graph.Size loop
+	    put(file, "------");
+	end loop;
+	new_line(file);
 
 	for i in 1..graph.Size loop
-	    put(file, i, 6);
+	    put(file, i, 5);
+	    put(file, "|");
 	    for j in 1..graph.Size loop
 		val := graph.Weights(i,j);
 		if(val = -1) then
@@ -49,6 +55,7 @@ package body Graphs is
 	    end loop;
 	    new_line(file);
 	end loop;
+	new_line(file);
     end WriteWeightedGraph;
 
     procedure DisplayWeightedGraph(graph : in WeightedGraph)
@@ -80,7 +87,7 @@ package body Graphs is
 
 	Reset(file);
 	for i in 1..size loop
-	    for j in (1+i)..size loop
+	    for j in i..size loop
 		get(file, val);
 		if(val = 0 and i /= j) then
 		    val := -1;
@@ -102,8 +109,16 @@ package body Graphs is
     -- Path Methods
     function "+"(path : in GraphPath; node : in GraphNode) return GraphPath
     is
-	newPath : GraphPath := path;
+	newPath : GraphPath;
+	iter : Path_List.listPtr := path.head;
     begin
+	newPath.head := Path_List.new_list(Path_List.value(iter));
+	newPath.last := newPath.head;
+	iter := Path_List.next(iter);
+	while(iter /= null) loop
+	    newPath.last := Path_List.insert_after(newPath.last, Path_List.value(iter));
+	    iter := Path_list.next(iter);
+	end loop;
 	newPath.last := Path_List.insert_after(newPath.last, node);
 	return newPath;
     
@@ -126,6 +141,9 @@ package body Graphs is
 	iter : Path_List.listPtr := path.head;
 	str : Unbounded_String;
     begin
+	if(iter = null) then
+	    return "X";
+	end if;
 	while(Path_List.next(iter) /= null) loop
 	    Append(str, "N");
 	    Append(str, Integer'Image(Path_List.value(iter)));
@@ -134,6 +152,7 @@ package body Graphs is
 	end loop;
 	Append(str, "N");
 	Append(str,Integer'Image(Path_List.value(iter)));
+
 	return To_String(str);
     end ToString;
     --------------------
