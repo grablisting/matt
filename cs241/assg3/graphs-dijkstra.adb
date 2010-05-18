@@ -26,19 +26,21 @@ package body Graphs.Dijkstra is
 	result : DijkstraResult;
 	visited : VisitedArray;
 	weight : Integer;
-	nextWeight : Integer;
+	nextWeight, oldWeight : Integer;
 	nextNode : GraphNode;
     begin
 	result.Lengths := new LengthTable_Type(1..graph.Size, 1..graph.Size);
 	result.Paths := new PathTable_Type(1..graph.Size);
+
+	result.Paths(1) := newGraphPath(1);
 	
 	-- initialize lengths/paths
 	for i in 1..graph.Size loop
 	    weight := graph.Weights(i,1);
 	    result.Lengths(i,1) := weight;
 
-	    if(weight /= -1) then
-		result.Paths(i) := NewGraphPath(i);
+	    if(weight /= -1 and i /= 1) then
+		result.Paths(i) := result.Paths(1) + i;
 	    end if;
 	end loop;
 
@@ -49,23 +51,19 @@ package body Graphs.Dijkstra is
 	    nextNode := PickNextNode(i-1, result.Lengths, visited);
 	    visited(nextNode) := true;
 	    weight := result.Lengths(nextNode, i-1);
-	    put(nextNode);
-	    new_line;
-
-	    -- WORKING HERE
-	    -- It's not picking the right next node
-	    ------
 
 	    for j in 1..graph.Size loop
-		if (j /= nextNode) then
-		    nextWeight := graph.Weights(nextnode, j);
-		    if(nextWeight > 0 and (weight + nextWeight) < result.Lengths(j, i-1)) then
-			result.Lengths(j, i) := (weight + nextWeight);
-			Free(result.Paths(j));
-			result.Paths(j) := result.Paths(nextNode) + j;
-		    else
-			result.Lengths(j, i) := result.Lengths(j, i-1);
-		    end if;
+		nextWeight := graph.Weights(j, nextNode);
+		oldWeight := result.Lengths(j, i-1);
+		if( (j /= nextNode) and 
+		    (nextWeight > 0) and 
+		    ( (oldWeight = -1) or ( (weight + nextWeight) < oldWeight)) ) 
+		then
+		    result.Lengths(j, i) := (weight + nextWeight);
+		    Free(result.Paths(j));
+		    result.Paths(j) := result.Paths(nextNode) + j;
+		else
+		    result.Lengths(j, i) := result.Lengths(j, i-1);
 		end if;
 	    end loop;
 	end loop;
@@ -83,7 +81,7 @@ package body Graphs.Dijkstra is
     begin
 	for i in lengths'range(1) loop
 	    curLength := lengths(i, iteration);
-	    if( (not visited(i)) and then ((curLength > 0) and (curLength <= minLength)) ) then
+	    if( (not visited(i)) and then ((curLength > 0) and (curLength < minLength)) ) then
 		minLength := curLength;
 		minIndex := i;
 	    end if;
@@ -105,14 +103,31 @@ package body Graphs.Dijkstra is
 	    put(file, i, 6);
 	end loop;
 	new_line(file);
+	put(file, "     ");
+	for i in 1..result.Lengths'Last-1 loop
+	    put(file, "------");
+	end loop;
+	new_line(file);
 
-	for i in result.Lengths'Range loop
-	    val := result.Lengths(i, result.Lengths'Last);
-	    if(val = -1) then
-		put(file, "     -");
-	    else
-		put(file, val, 6);
-	    end if;
+	for i in result.Lengths'Range(1) loop
+	    for j in result.Lengths'Range(2) loop
+		val := result.Lengths(j, i);
+		if(val = -1) then
+		    put(file, "     -");
+		else
+		    put(file, val, 6);
+		end if;
+	    end loop;
+	    new_line(file);
+	end loop;
+
+	new_line(file);
+
+	put_line(file, "Shortest Path to Each node from N1");
+	for i in result.Paths'Range loop
+	    put(file, i, 0);
+	    put(file, ": ");
+	    put_line(file, ToString(result.Paths(i)));
 	end loop;
 	new_line(file);
 	    

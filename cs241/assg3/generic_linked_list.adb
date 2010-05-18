@@ -2,6 +2,7 @@
 --Feb 1, 2010
 --Generic Linked List package body
 
+with Ada.Text_IO; use Ada.Text_IO;
 with Ada.Unchecked_Deallocation;
 
 package body Generic_Linked_List is
@@ -25,6 +26,7 @@ package body Generic_Linked_List is
 	nList : listPtr;
     begin
 	nList := new list;
+	nList.value := Item;
 	nList.next := NULL;
 	return nList;
     end new_list;
@@ -93,14 +95,13 @@ package body Generic_Linked_List is
     end remove_after;
 
     procedure clear(aList : in out listPtr) is
-	tmp, next : listPtr;
+	tmp : listPtr;
     begin
-	next := aList;
-	while(next /= NULL) loop
-	    tmp := next.next;
-	    free(next);
-	    next := tmp;
-	end loop;
+	if(aList /= null) then
+	    tmp := aList.next;
+	    free(aList);
+	    clear(tmp);
+	end if;
     end clear;
 
 end Generic_Linked_list;
