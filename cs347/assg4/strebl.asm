@@ -1,4 +1,13 @@
+%include "asm_io.inc"
+
+LF       equ     0AH
+
+segment .bss
 tmp_str		resb	80
+
+segment .text
+	global remove_spaces, getline
+
 ; remove_spaces - remove leading/trailing/duplicate spaces in string
 ; arg1 - string to clean - [ebp+4]
 remove_spaces:
@@ -38,27 +47,52 @@ end_remove_loop:
 	pop		ebp
 	ret
 	
+
 ; strcpy - copies one string into another
 ; arg1: destination - [ebp+4]
 ; arg2: source - [ebp+8]
 strcpy:
 	push	ebp
 	
-	mov		ebx, [ebp+4] ; destination
-	mov		ecx, [ebp+8] ; source
+	mov 	ebx, [ebp+4] ; destination
+	mov 	ecx, [ebp+8] ; source
 	
 copy_loop:
-	cmp		byte [ecx], 0 ; stopping case
-	je		end_copy_loop
+	cmp 	byte [ecx], 0 ; stopping case
+	je  	end_copy_loop
 	
-	mov		al, [ecx] ; copy instructions
-	mov		[ebx], al
+	mov 	al, [ecx] ; copy instructions
+	mov 	[ebx], al
 	
-	inc		ebx ; continue reading strings
-	inc		ecx
+	inc 	ebx ; continue reading strings
+	inc 	ecx
 	
 end_copy_loop:
 	mov		byte [ebx], 0 ; store nul terminator
 	
 	pop ebp
 	ret
+
+
+; getline - reads a string into arg1 up to end of line
+; arg1 - address of destination - [ebp+4]
+getline:
+	push     ebp
+
+	mov     ebx, [ebp+4] ; point ebx at our destination
+
+read_loop:
+	call    read_char
+	cmp     byte al, LF
+	je      end_read_loop
+
+	mov     byte [ebx], al
+	inc     ebx
+	jmp     read_loop
+
+end_read_loop:
+	mov     byte [ebx], 0 ; nul terminator
+
+	pop ebp
+	ret
+
