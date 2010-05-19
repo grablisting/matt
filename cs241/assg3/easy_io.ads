@@ -1,3 +1,5 @@
+-- Matt Forbes
+-- IO package specification for robustly prompting for and opening files
 with Ada.Text_IO; use Ada.Text_IO;
 
 package Easy_IO is

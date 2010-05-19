@@ -1,13 +1,17 @@
+-- Matt Forbes
+-- IO package body
 with Ada.Text_IO; use Ada.Text_IO;
 
 package body Easy_IO is
 
+    -- Type to conveniently store information about a file
     type FileName is
 	record
 	    Name : String(1..256);
 	    Len : Natural;
 	end record;
 
+    -- Get a filename from stdin, and return a FileName record of it
     function GetFileName return FileName 
     is
 	name : FileName;
@@ -16,6 +20,7 @@ package body Easy_IO is
 	return name;
     end GetFileName;
 
+    -- Given a FileName record, return an exact string of it's contents
     function ToString(name : FileName) return String
     is
     begin
@@ -23,6 +28,7 @@ package body Easy_IO is
     end ToString;
 	
     
+    -- Robustly get an input file from stdin
     procedure GetInputFile(msg : in String; file : out File_Type)
     is
 	name : FileName;
@@ -41,6 +47,7 @@ package body Easy_IO is
 	end loop;
     end GetInputFile;
 
+    -- Robustly get an output file, if it doesn't exist, create it.
     procedure GetOutputFile(msg : in String; file : out File_Type)
     is
 	name : FileName;

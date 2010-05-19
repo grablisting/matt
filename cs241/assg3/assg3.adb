@@ -1,6 +1,7 @@
 -- Matt Forbes
 -- CSCI 241 - Assignment 3
 -- Dijkstra's Shortest Path Algorithm
+-- Main program - driver
 
 with Ada.Text_IO; use Ada.Text_IO;
 with Easy_IO; use Easy_IO;
@@ -16,14 +17,17 @@ begin
     GetInputFile("Input file containing weighted graph: ", inFile);
     GetOutputFile("Output file to write result of Dijkstra's algorithm to: ", outFile);
 
+    -- get the graph from file
     ReadWeightedGraphFromFile(inFile, graph);
 
-
+    -- run dijkstra's algorithm on the graph
     result := RunDijkstras(graph);
 
+    -- display and print graph representation to output file
     DisplayWeightedGraph(graph);
     WriteWeightedGraph(outFile, graph);
 
+    -- display and print dijkstra's results to output file
     WriteDijkstraResult(outFile, result);
     DisplayDijkstraResult(result);
 
