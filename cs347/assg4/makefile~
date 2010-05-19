@@ -4,16 +4,24 @@
 .asm.o:
 	$(AS) $(ASFLAGS) $<
 
+.c.o:
+	$(CC) $(CCFLAGS) -c $<
+
 AS = nasm
 ASFLAGS = -f elf
 CC = gcc
 CCFLAGS = -Wall -m32
 LIBDIR = ../nasm
-LIBS = $(LIBDIR)/driver.c $(LIBDIR)/asm_io.o $(LIBDIR)/cdecl.h
+LIBS = $(LIBDIR)/asm_io.o $(LIBDIR)/cdecl.h
 
 all:
 	make mstrebl
+	make substrng
 
-mstrebl: mstrebl.o strebl.o
-	$(CC) $(CCFLAGS) $? $(LIBS) -o $@
+mstrebl: strebl.o mstrebl.o
+	$(CC) $(CCFLAGS) strebl.o mstrebl.o $(LIBS) -o $@
+
+substrng: substrng_c.o substrng_a.o
+	$(CC) $(CCFLAGS) $(LIBS) -o $@ %?
+	
 

@@ -1,3 +1,7 @@
+-- Matt Forbes
+-- May 19, 2010
+-- Package body for dijkstra's algorithm utilities
+
 with Ada.Text_IO; use Ada.Text_IO;
 With Ada.Integer_Text_IO; use Ada.Integer_Text_IO;
 with Ada.Unchecked_Deallocation;
@@ -10,6 +14,7 @@ package body Graphs.Dijkstra is
     procedure Deallocate_LengthTable is new Ada.Unchecked_Deallocation(LengthTable_Type, LengthTable);
     procedure Deallocate_VisitedArray is new Ada.Unchecked_Deallocation(VisitedArray_Type, VisitedArray);
 
+    -- Free a dijkstra result
     procedure Free(result : in out DijkstraResult)
     is
     begin
@@ -25,42 +30,55 @@ package body Graphs.Dijkstra is
     is
 	result : DijkstraResult;
 	visited : VisitedArray;
-	weight : Integer;
+	length : Integer;
 	nextWeight, oldWeight : Integer;
+	nextLength;
 	nextNode : GraphNode;
     begin
+	-- Initialize the length/path table
 	result.Lengths := new LengthTable_Type(1..graph.Size, 1..graph.Size);
 	result.Paths := new PathTable_Type(1..graph.Size);
 
+	-- Initialize visited table to all false (we haven't visited anything yet)
+	visited := new VisitedArray_Type(1..graph.Size);
+	visited.all := (others => false);
+
+	-- Create the path for node 1, which is just itself
 	result.Paths(1) := newGraphPath(1);
+	visisted(1) := true;
 	
 	-- initialize lengths/paths
 	for i in 1..graph.Size loop
-	    weight := graph.Weights(i,1);
-	    result.Lengths(i,1) := weight;
+	    -- record the weight from the first node and every node, which 
+	    -- is the first step of dijkstra's
+	    length := graph.Weights(i,1);
+	    result.Lengths(i,1) := length;
 
-	    if(weight /= -1 and i /= 1) then
+	    -- if there is an edge between the first node and node i, then
+	    -- create a new path by adding node i to the path to node 1
+	    if(length /= -1 and i /= 1) then
 		result.Paths(i) := result.Paths(1) + i;
 	    end if;
 	end loop;
 
-	visited := new VisitedArray_Type(1..graph.Size);
-	visited.all := (others => false);
-
+	-- We have n-1 nodes to visit before we have completed the algorithm
 	for i in 2..graph.Size loop
+	    -- Pick the next node to visit by checking length table, and visited table
 	    nextNode := PickNextNode(i-1, result.Lengths, visited);
+
+	    -- Visit the node we just picked
 	    visited(nextNode) := true;
-	    weight := result.Lengths(nextNode, i-1);
+	    nextWeight := result.Lengths(nextNode, i-1);
 
 	    for j in 1..graph.Size loop
-		nextWeight := graph.Weights(j, nextNode);
+		nextLength := graph.Weights(j, nextNode);
 		oldWeight := result.Lengths(j, i-1);
 		if( (j /= nextNode) and 
 		    (not visited(j)) and
-		    (nextWeight > 0) and 
-		    ( (oldWeight = -1) or ( (weight + nextWeight) < oldWeight)) ) 
+		    (nextLength > 0) and 
+		    ( (oldWeight = -1) or ( (nextWeight + nextLength) < oldWeight)) ) 
 		then
-		    result.Lengths(j, i) := (weight + nextWeight);
+		    result.Lengths(j, i) := (nextWeight + nextLength);
 		    Free(result.Paths(j));
 		    result.Paths(j) := result.Paths(nextNode) + j;
 		else
