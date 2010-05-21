@@ -20,11 +20,11 @@ D a-tags.ads		20071213102130 e10285b3
 D a-textio.ads		20071213102052 bc6e78fe
 D a-unccon.ads		20070406091342 51e09df2
 D a-uncdea.ads		20070406091342 dc667e6d
-D assg3.adb		20100517172329 d65b265c
-D easy_io.ads		20100517172329 6effe38e
+D assg3.adb		20100519165554 d65b265c
+D easy_io.ads		20100519165554 6effe38e
 D generic_linked_list.ads  20100515202745 3432f07b
 D graphs.ads		20100517172329 566084e8
-D graphs-dijkstra.ads	20100517172329 c16c7b09
+D graphs-dijkstra.ads	20100519165554 c16c7b09
 D interfac.ads		20051209172227 a69cad5c
 D i-cstrea.ads		20070406092312 e1e064a9
 D system.ads		20090825132454 e2b32c27
@@ -45,33 +45,33 @@ D s-traent.ads		20070912115821 bd5f2753
 D s-unstyp.ads		20070912115821 c0f9fae5
 D s-wchcon.ads		20071213102052 ab028799
 X 1 ada.ads
-16K9*Ada 19e8 11|5r6 5r23
+16K9*Ada 19e8 11|6r6 6r23
 X 8 a-textio.ads
-50K13*Text_IO 482e16 11|5w10 5r27
-53P9*File_Type(345R9) 11|14r23
-100U14*Close 11|31r5 32r5
+50K13*Text_IO 482e16 11|6w10 6r27
+53P9*File_Type(345R9) 11|15r23
+100U14*Close 11|35r5 36r5
 X 11 assg3.adb
-10U11*Assg3 10b11 35l5 35t10
-12p5 graph{14|10P10} 19m39 22r28 24r26 25r33 34m10
-13r5 result{15|3R10} 22m5 27r34 28r27 33m10
-14p5 inFile{8|53P9} 16m60 19m31 31m11
-14p13 outFile{8|53P9} 17m79 25r24 27r25 32m11
+11U11*Assg3 11b11 39l5 39t10
+13p5 graph{14|10P10} 21m39 24r28 27r26 28r33 38m10
+14r5 result{15|9R10} 24m5 31r34 32r27 37m10
+15p5 inFile{8|53P9} 17m60 21m31 35m11
+15p13 outFile{8|53P9} 18m79 28r24 31r25 36m11
 X 12 easy_io.ads
-3K9*Easy_IO 11|6w6 6r19 12|8e12
-5U15*GetInputFile 11|16r5
-6U15*GetOutputFile 11|17r5
+5K9*Easy_IO 11|7w6 7r19 12|10e12
+7U15*GetInputFile 11|17r5
+8U15*GetOutputFile 11|18r5
 X 14 graphs.ads
-5K9*Graphs 11|7w6 7r18 8r6 8r27 14|53e11
-10P10*WeightedGraph(38R10) 11|12r13
-14U15*ReadWeightedGraphFromFile 11|19r5
-15U15*WriteWeightedGraph 11|25r5
-16U15*DisplayWeightedGraph 11|24r5
-19U15*Free 11|34r5
+5K9*Graphs 11|8w6 8r18 9r6 9r27 14|53e11
+10P10*WeightedGraph(38R10) 11|13r13
+14U15*ReadWeightedGraphFromFile 11|21r5
+15U15*WriteWeightedGraph 11|28r5
+16U15*DisplayWeightedGraph 11|27r5
+19U15*Free 11|38r5
 X 15 graphs-dijkstra.ads
-1K16*Dijkstra 11|8w13 8r34 15|28e20
-3R10*DijkstraResult 11|13r14 15|24e19
-5V14*RunDijkstras{3R10} 11|22r15
-6U15*WriteDijkstraResult 11|27r5
-7U15*DisplayDijkstraResult 11|28r5
-8U15*Free 11|33r5
+5K16*Dijkstra 11|9w13 9r34 15|51e20
+9R10*DijkstraResult 11|14r14 15|44e19
+12V14*RunDijkstras{9R10} 11|24r15
+15U15*WriteDijkstraResult 11|31r5
+16U15*DisplayDijkstraResult 11|32r5
+19U15*Free 11|37r5
 
