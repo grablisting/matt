@@ -70,7 +70,7 @@ asm_main:
 	push	 matrix
 	push	 t_matrix
 	call	 transpose_matrix
-	add		 esp, 8	
+	add		 esp, 20	
 
 	; Print transposed matrix
 	mov		 eax, tran_output
@@ -195,16 +195,36 @@ print_col:
 transpose_matrix:
 	enter    0,0
 
+	; setup pointers to matrices
 	mov      ebx, [ebp+12]
-	mov		 eax, [ebp+8]
-	mov		 ecx, [ebp+20]
-	mov		 esi, [ebp+16]
+
+	; setup counters, ecx = i, esi = j
+	mov		 ecx, 0
+	mov		 esi, 0
 
 trans_outer:
-	mov		 edx, [ebp+16]
+	mov		 esi, 0
 trans_inner:
 	;compute index
+	mov		 eax, [ebp+8]
+	mov		 edi, [ebp+20]
+	imul     edi, esi
+	add		 edi, ecx
+	imul	 edi, 4
+	add		 eax, edi
+
+	;store value into t_matrix
+	mov		 edi, [ebx]
+	mov		 [eax], edi
 	
+	inc		 esi
+	add		 ebx, 4
+	cmp		 esi, [ebp+16]
+	jl		 trans_inner
+
+	inc		 ecx
+	cmp		 ecx, [ebp+20]
+	jl		 trans_outer
 
 	leave
 	ret
