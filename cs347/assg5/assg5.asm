@@ -82,10 +82,15 @@ asm_main:
 	call	 print_matrix
 	add		 esp, 12
 
-	; Find max element in matrix
+	; Find max element in matrix 
 	push	 matrix
+	push	 dword [m_rows]
+	push	 dword [m_cols]
+	push	 max
+	push	 max_r
+	push	 max_c
 	call	 max_matrix
-	add		 esp, 4
+	add		 esp, 28
 	
 	; Print max element
 	mov		 eax, max_output
@@ -217,11 +222,13 @@ trans_inner:
 	mov		 edi, [ebx]
 	mov		 [eax], edi
 	
+	;next inner loop
 	inc		 esi
 	add		 ebx, 4
 	cmp		 esi, [ebp+16]
 	jl		 trans_inner
 
+	;next outer loop
 	inc		 ecx
 	cmp		 ecx, [ebp+20]
 	jl		 trans_outer
@@ -229,14 +236,56 @@ trans_inner:
 	leave
 	ret
 
-; void max_matrix(int **matrix, int *max, int *max_row, int *max_col);
-; int **matrix = [ebp+20]
+; void max_matrix(int **matrix, 
+;				  int rows,
+;				  int cols,
+;				  int *max, 
+;				  int *max_row,
+;				  int *max_col);
+; int **matrix = [ebp+28]
+; int rows	   = [ebp+24]
+; int cols	   = [ebp+20]
 ; int *max     = [ebp+16]
 ; int *max_row = [ebp+12]
 ; int *max_col = [ebp+8]
+; locals:
+; int max = [ebp-4]
 max_matrix:
-	enter    0,0
+	enter    0,4
 		
+	; initialize max and pointer to matrix
+	mov		 dword [ebp-4], 0
+	mov		 ebx, [ebp+28]
+
+	; setup counters, ecx = i, esi = j
+	mov		 ecx, 0
+	mov		 esi, 0
+
+max_outer:
+	mov		 esi, 0
+max_inner:
+	; check if this element is the new maximum
+	mov		 eax, [ebx]
+	cmp		 dword eax, [ebp-4]
+	jle		 next_max_inner
+
+	;set new maximum
+	mov		 dword [ebp-4], eax
+	mov		 dword [ebp+12], ecx
+	mov		 dword [ebp+8], esi
+
+next_max_inner:
+	;next inner loop
+	inc		 esi
+	add		 ebx, 4
+	cmp		 esi, [ebp+20]
+	jl		 trans_inner
+
+	;next outer loop
+	inc		 ecx
+	cmp		 ecx, [ebp+24]
+	jl		 trans_outer
+
 
 	leave
 	ret
