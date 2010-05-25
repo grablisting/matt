@@ -8,7 +8,7 @@
 
 AS=nasm
 ASFLAGS= -f elf
-CFLAGS= 
+CFLAGS= -Wall -m32
 CC=gcc
 CXX=g++
 CXXFLAGS=
