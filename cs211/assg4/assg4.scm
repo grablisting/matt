@@ -67,6 +67,21 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;
+; subset - (assignment has the function with no '?' so here's a copy)
+; takes two sets and returns true if all of the elements in the first
+; set are elements in the second set
+;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(define subset
+  (lambda (set1 set2)
+    (if (null? set1)
+        #t
+        (and (memb? (car set1) set2)
+             (subset? (cdr set1) set2)))))
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;
 ; union
 ; takes two sets and returns a new set with all of the elements that are
 ; in either the first set, the second set, or both
