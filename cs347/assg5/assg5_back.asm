@@ -11,7 +11,7 @@
 ; void print_matrix(int rows, int cols, int **matrix);
 ; void transpose_matrix(int **matrix, int **t_matrix);
 ; void max_matrix(int **matrix, int *max, int *max_row, int *max_col);
-; void print_matrix_elem(int elem, int row, int col);
+; void print_matrix_elem(int *max, int *max_row, int *max_col);
 
 segment .data
 	m_rows		dd		0
@@ -90,18 +90,17 @@ asm_main:
 	push	 max_r
 	push	 max_c
 	call	 max_matrix
-	add		 esp, 24
-
+	add		 esp, 28
+	
 	; Print max element
 	mov		 eax, max_output
 	call     print_string
+	call     print_nl
 	push	 dword [max]
 	push	 dword [max_r]
 	push	 dword [max_c]
 	call	 print_matrix_elem
 	add		 esp, 12
-
-	call	 print_nl
 
 	popa
 	mov		 eax, 0
@@ -250,9 +249,7 @@ trans_inner:
 ; int *max_row = [ebp+12]
 ; int *max_col = [ebp+8]
 ; locals:
-; int max      = [ebp-4]
-; int i        = ecx
-; int j        = esi
+; int max = [ebp-4]
 max_matrix:
 	enter    0,4
 		
@@ -272,71 +269,31 @@ max_inner:
 	cmp		 dword eax, [ebp-4]
 	jle		 next_max_inner
 
-	;set new max
+	;set new maximum
 	mov		 dword [ebp-4], eax
-
-	; update max_row value
-	mov		 eax, [ebp+12]
-	mov		 edx, ecx
-	mov		 [eax], edx 
-	
-	; update max_col value
-	mov		 eax, [ebp+8]
-	mov		 edx, esi
-	mov		 [eax], edx 
-
+	mov		 dword [ebp+12], ecx
+	mov		 dword [ebp+8], esi
 
 next_max_inner:
 	;next inner loop
 	inc		 esi
 	add		 ebx, 4
 	cmp		 esi, [ebp+20]
-	jl		 max_inner
+	jl		 trans_inner
 
 	;next outer loop
 	inc		 ecx
 	cmp		 ecx, [ebp+24]
-	jl		 max_outer
+	jl		 trans_outer
 
-	; update max value (at address passed in)
-	mov		 eax, [ebp+16]
-	mov		 edx, [ebp-4]
-	mov		 [eax], edx
 
+	dump_regs 1
 	leave
 	ret
 
-; void print_matrix_elem(int elem, int row, int col)
-; int elem = [ebp+16]
-; int row = [ebp+12]
-; int col = [ebp+8]
+; void print_matrix_elem(int *max, int *max_row, int *max_col)
 print_matrix_elem:
 	enter    0,0
-
-	mov      eax, [ebp+16]
-	call     print_int
-
-
-	mov      eax, elem_output
-	call     print_string
-
-	mov		 eax, '['
-	call	 print_char
-
-	mov		 eax, [ebp+12]
-	call	 print_int
-
-	mov		 eax, ']'
-	call	 print_char
-
-	mov		 eax, '['
-	call	 print_char
-
-	mov		 eax, [ebp+8]
-	call	 print_int
-
-	mov		 eax, ']'
-	call	 print_char
 
 	leave
 	ret
