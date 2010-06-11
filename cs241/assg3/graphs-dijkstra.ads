@@ -31,7 +31,7 @@ private
     type LengthTable_Type is Array(Natural range <>, Natural range <>) of GraphWeight;
     type LengthTable is access LengthTable_Type;
 
-    -- Array to store the shorted pasth from the first node to every other at each step
+    -- Array to store the shorted path from the first node to every other at each step
     -- of dijkstra's algorithm
     type PathTable_Type is Array(Natural range <>) of GraphPath;
     type PathTable is access PathTable_Type;

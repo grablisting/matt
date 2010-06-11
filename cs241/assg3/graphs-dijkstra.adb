@@ -32,7 +32,7 @@ package body Graphs.Dijkstra is
 	visited : VisitedArray;
 	length : Integer;
 	nextWeight, oldWeight : Integer;
-	nextLength;
+	nextLength : Integer;
 	nextNode : GraphNode;
     begin
 	-- Initialize the length/path table
@@ -45,7 +45,7 @@ package body Graphs.Dijkstra is
 
 	-- Create the path for node 1, which is just itself
 	result.Paths(1) := newGraphPath(1);
-	visisted(1) := true;
+	visited(1) := true;
 	
 	-- initialize lengths/paths
 	for i in 1..graph.Size loop
@@ -66,37 +66,46 @@ package body Graphs.Dijkstra is
 	    -- Pick the next node to visit by checking length table, and visited table
 	    nextNode := PickNextNode(i-1, result.Lengths, visited);
 
-	    -- Visit the node we just picked
 	    visited(nextNode) := true;
+
+	    -- the nextweight is the weight from node 1 to the node we just picked
 	    nextWeight := result.Lengths(nextNode, i-1);
 
+	    -- Now check against every other node to see if there is a better path
 	    for j in 1..graph.Size loop
+		-- From the current node, how far to the one we are checking
 		nextLength := graph.Weights(j, nextNode);
+		-- The currently best length
 		oldWeight := result.Lengths(j, i-1);
+		-- Is the new route better?
 		if( (j /= nextNode) and 
 		    (not visited(j)) and
 		    (nextLength > 0) and 
 		    ( (oldWeight = -1) or ( (nextWeight + nextLength) < oldWeight)) ) 
 		then
+		    -- If so, change it
 		    result.Lengths(j, i) := (nextWeight + nextLength);
 		    Free(result.Paths(j));
 		    result.Paths(j) := result.Paths(nextNode) + j;
 		else
+		    -- Otherwise, keep the old length
 		    result.Lengths(j, i) := result.Lengths(j, i-1);
 		end if;
 	    end loop;
 	end loop;
 
+	-- We're done with the visited array
 	Deallocate_VisitedArray(visited);
+
 	return result;
     end RunDijkstras;
 
+    -- Function to pick the next best node in our collection (cannot have been visited, and must have minimum length)
     function PickNextNode(iteration : Natural; lengths : LengthTable; visited : VisitedArray) return GraphNode
     is
 	minLength : GraphWeight := Integer'Last;
 	minIndex : GraphNode;
 	curLength : GraphWeight;
-
     begin
 	for i in lengths'range(1) loop
 	    curLength := lengths(i, iteration);

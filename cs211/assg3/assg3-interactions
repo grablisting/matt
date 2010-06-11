@@ -1,0 +1,41 @@
+Welcome to DrScheme, version 4.1.4 [3m].
+Language: R5RS; memory limit: 128 megabytes.
+> (div 864 37)
+(23 13)
+> (quotient 864 37)
+23
+> (remainder 864 37)
+13
+> (mygcd 1322 550)
+2
+> (mygcd 44326 324)
+2
+> (mygcd 64 8)
+8
+> (gcd 64 8)
+8
+> (dtb 37)
+100101
+> (dtb 256)
+100000000
+> (dtb 1024)
+10000000000
+> (dtb 88)
+1011000
+> (dtb 20)
+10100
+> tree
+(((() 11 ()) 8 (() 6 ())) 5 (() 4 (() 2 ((() 3 ()) 22 ((() 4 ()) 3 ())))))
+> (NumberOfNodes tree)
+10
+> (NumberOfNodes '())
+0
+> (NumberOfNodes '(()5()))
+1
+> (NumberOfLeaves tree)
+4
+> (NumberOfLeaves '())
+0
+> (NumberOfLeaves '((()1())2(()5())))
+2
+> 
